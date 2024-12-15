@@ -1,0 +1,32 @@
+@import '../variables.css';
+
+.services-section {
+  padding: var(--spacing-xl) 0;
+  background-color: white;
+}
+
+.services-title-container {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.services-title {
+  font-size: 3rem;
+  color: var(--primary-turquoise);
+  margin-bottom: var(--spacing-md);
+  display: inline-block;
+  position: relative;
+}
+
+.services-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--primary-red);
+  border-radius: 2px;
+}

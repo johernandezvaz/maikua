@@ -1,0 +1,22 @@
+@import '../variables.css';
+
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-title {
+    text-align: center;
+    position: static;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .tabs-navigation {
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}

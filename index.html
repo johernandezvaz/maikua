@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maikua - Innovación con Raíces</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <img src="assets/maikua_logo.png" alt="Maikua Logo" class="nav-logo">
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header" id="inicio">
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="assets/maikua_logo.png" alt="Maikua Logo" class="logo">
+            </div>
+            <h1>Innovación con Raíces</h1>
+            <p>Fusionando tecnología avanzada con la rica herencia mexicana para crear un futuro más brillante</p>
+        </div>
+    </header>
+
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-left">
+                <h2 class="about-title">Conócenos</h2>
+            </div>
+            
+            <div class="tabs-container">
+                <div class="tabs-navigation">
+                    <button class="tab-button" data-tab="about">Nosotros</button>
+                    <button class="tab-button" data-tab="vision">Visión</button>
+                    <button class="tab-button" data-tab="mision">Misión</button>
+                    <button class="tab-button" data-tab="valores">Valores</button>
+                </div>
+
+                <div id="about" class="tab-content">
+                    <h3>Acerca de Nosotros</h3>
+                    <p>En Maikua, combinamos innovación tecnológica con nuestras raíces culturales para ofrecer soluciones inteligentes a problemas cotidianos e industriales. Nos inspiramos en la sabiduría de lo simple para crear lo extraordinario.</p>
+                    <p>Maikua nace en Chihuahua con la visión de unir lo tradicional y lo moderno, entendimos que la tecnología debe ser un motor de desarrollo accesible.</p>
+                    <p>Creemos en la innovación con propósito: tecnología útil, transparente y accesible. Nuestra esencia está en crear dispositivos embebidos e inteligentes que brinden tranquilidad y soluciones reales, siempre con respeto por nuestra comunidad.</p>
+                </div>
+
+                <div id="vision" class="tab-content">
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser la empresa líder en el desarrollo de soluciones tecnológicas que transformen la vida de las personas y las empresas, aportando innovación, seguridad y tranquilidad. Nos comprometemos a fusionar tecnología y creatividad para enfrentar los desafíos del presente y construir un futuro más accesible, eficiente y humano.</p>
+                </div>
+
+                <div id="mision" class="tab-content">
+                    <h3>Nuestra Misión</h3>
+                    <p>Resolver problemas cotidianos e industriales a través de dispositivos inteligentes con sistemas embebidos y tecnologías accesibles como microcontroladores (Raspberry Pi, Arduino, ESP32, entre otros). Nos enfocamos en desarrollar soluciones innovadoras, eficientes y funcionales que impacten positivamente a más de una persona, facilitando tareas desde las más simples hasta las más complejas, y mejorando la calidad de vida de nuestra comunidad.</p>
+                </div>
+
+                <div id="valores" class="tab-content">
+                    <h3>Nuestros Valores</h3>
+                    <ul class="valores-list">
+                        <li><strong>Innovación:</strong> Impulsamos la creatividad y el uso eficiente de la tecnología para generar soluciones únicas y efectivas.</li>
+                        <li><strong>Respeto:</strong> Valoramos y honramos a las personas, culturas y entornos con los que colaboramos.</li>
+                        <li><strong>Honestidad:</strong> Trabajamos con ética, transparencia y responsabilidad en cada uno de nuestros proyectos.</li>
+                        <li><strong>Accesibilidad:</strong> Creamos tecnología que sea funcional, asequible y al alcance de todos.</li>
+                        <li><strong>Compromiso:</strong> Nos dedicamos a resolver problemas con la mayor calidad, profesionalismo y dedicación.</li>
+                        <li><strong>Seguridad:</strong> Garantizamos que nuestros productos y soluciones sean confiables y ofrezcan tranquilidad a nuestros usuarios.</li>
+                        <li><strong>Sostenibilidad:</strong> Buscamos generar un impacto positivo en la sociedad y en el medio ambiente, desarrollando soluciones responsables y duraderas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module">
+        import { initTabs } from './js/tabs.js';
+        document.addEventListener('DOMContentLoaded', initTabs);
+    </script>
+
+
+
+    <section class="service-section" id="services">
+        <div class="container">
+            <div class="services-title-container">
+                <h2 class="services-title"> ¿A qué nos dedicamos?</h2> 
+            </div>
+            <div class="services">
+                <div class="service-card">
+                    <i class="fas fa-microchip service-icon"></i>
+                    <h3>Sistemas Embebidos</h3>
+                    <p>Desarrollo de dispositivos inteligentes y soluciones tecnológicas adaptadas a necesidades específicas.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-brain service-icon"></i>
+                    <h3>Investigación en IA</h3>
+                    <p>Centro de investigación dedicado a resolver problemas locales y globales mediante inteligencia artificial.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-hands-helping service-icon"></i>
+                    <h3>Soluciones Empresariales</h3>
+                    <p>Asesoría y desarrollo de soluciones tecnológicas para empresas con un enfoque práctico y accesible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contacto">
+        <p>© 2024 Maikua - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
