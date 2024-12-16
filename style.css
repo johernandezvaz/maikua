@@ -1,9 +1,15 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 @import 'styles/variables.css';
 @import 'styles/layout.css';
 @import 'styles/components/about.css';
 @import 'styles/components/tabs.css';
 @import 'styles/components/services.css';
 @import 'styles/components/projects.css';
+@import 'styles/components/research.css';
+@import 'styles/components/testimonials.css';
+@import 'styles/components/blog.css';
+@import 'styles/components/contact.css';
+@import 'styles/components/footer.css';
 @import 'styles/utils/responsive.css';
 
   :root {
@@ -135,12 +141,6 @@
       color: var(--primary-turquoise);
     }
     
-    .footer {
-      background: var(--text-dark);
-      color: white;
-      padding: 3rem 2rem;
-      text-align: center;
-    }
 
     .servicios-title{
       font-size: 4rem;

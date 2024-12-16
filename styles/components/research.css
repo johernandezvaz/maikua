@@ -1,0 +1,141 @@
+@import '../variables.css';
+
+.research-section {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(to bottom right, #ffffff, var(--bg-cream));
+  position: relative;
+  overflow: hidden;
+}
+
+.research-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.research-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.research-title {
+  font-size: 3rem;
+  color: var(--primary-turquoise);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  display: inline-block;
+}
+
+.research-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--primary-red);
+  border-radius: 2px;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.research-content {
+  padding-right: var(--spacing-xl);
+}
+
+.research-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-lg);
+}
+
+.tech-areas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.tech-card {
+  background: white;
+  padding: var(--spacing-md);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+}
+
+.tech-icon {
+  font-size: 2rem;
+  color: var(--primary-turquoise);
+  margin-bottom: var(--spacing-sm);
+}
+
+.tech-title {
+  font-size: 1.2rem;
+  color: var(--primary-turquoise);
+  margin-bottom: var(--spacing-sm);
+}
+
+.tech-description {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.stats-container {
+  background: white;
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--spacing-md);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-turquoise);
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-areas {
+    grid-template-columns: 1fr;
+  }
+
+  .research-content {
+    padding-right: 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
