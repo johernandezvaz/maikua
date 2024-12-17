@@ -123,3 +123,33 @@
 body.menu-open {
   overflow: hidden;
 }
+
+
+/* Ajustes específicos para dispositivos pequeños (width <= 389px) */
+@media (max-width: 389px) {
+  html, body {
+    overflow-x: hidden; /* Asegura que no haya scroll horizontal */
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem; /* Reduce aún más el tamaño de la fuente */
+  }
+
+  .hero-content p {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto para evitar desbordamiento */
+  }
+
+  .container {
+    padding-left: var(--spacing-sm); /* Reduce el espaciado lateral */
+    padding-right: var(--spacing-sm);
+  }
+
+  .logo {
+    width: 100px; /* Ajusta el tamaño del logo */
+  }
+
+  /* Verifica contenedores con grid */
+  .grid {
+    display: block; /* Evita problemas con grid en tamaños extremos */
+  }
+}
