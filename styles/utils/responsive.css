@@ -153,3 +153,161 @@ body.menu-open {
     display: block; /* Evita problemas con grid en tamaños extremos */
   }
 }
+
+
+/* Responsividad para tablets */
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr; /* Contenido apilado */
+    gap: var(--spacing-lg);
+  }
+
+  .about-title {
+    font-size: 3rem; /* Reducimos el tamaño del título */
+    top: var(--spacing-lg); /* Ajuste del sticky */
+  }
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2.5rem; /* Ajuste de tamaño del título */
+    text-align: center;
+  }
+
+  .about-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 2rem; /* Título aún más pequeño */
+    line-height: 1.1;
+  }
+
+  .about-section {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-button {
+    font-size: 0.9rem; /* Reducimos el tamaño de la fuente */
+    padding: var(--spacing-sm);
+  }
+}
+
+.tab-content {
+  padding: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .tab-content {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Responsividad para contenido */
+@media (max-width: 480px) {
+  .tab-button {
+    font-size: 0.8rem;
+    padding: var(--spacing-sm);
+  }
+
+  .tab-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .tab-content p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Responsividad para Tablets */
+@media (max-width: 1024px) {
+  .future-testimonials {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+    gap: var(--spacing-lg);
+  }
+
+  .testimonials-title {
+    font-size: 2.5rem; /* Reducimos título */
+  }
+
+  .coming-soon-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Responsividad para Móviles */
+@media (max-width: 768px) {
+  .future-testimonials {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+    gap: var(--spacing-md);
+  }
+
+  .testimonials-title {
+    font-size: 2rem;
+  }
+
+  .coming-soon-wrapper {
+    padding: var(--spacing-lg); /* Reducimos padding */
+  }
+
+  .coming-soon-text {
+    font-size: 1rem; /* Reducimos texto */
+  }
+
+  .testimonial-placeholder {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-title {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .coming-soon-title {
+    font-size: 1.5rem;
+  }
+
+  .coming-soon-text {
+    font-size: 0.9rem;
+  }
+
+  .placeholder-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Asegurar que la grid no se rompa en pantallas pequeñas */
+@media (max-width: 768px) {
+  .future-testimonials {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Forzar siempre 3 columnas */
+  }
+}
+
+@media (max-width: 480px) {
+  .future-testimonials {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 columnas incluso en móviles */
+    gap: var(--spacing-sm); /* Reducir espacio entre tarjetas */
+  }
+
+  .testimonial-placeholder {
+    padding: var(--spacing-sm); /* Reducir padding */
+  }
+
+  .placeholder-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem; /* Ajustar tamaño de avatar */
+  }
+}
