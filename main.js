@@ -1,3 +1,8 @@
+import { initNavigation } from './js/navigation.js';
+import { initTabs } from './js/tabs.js';
+import { initContactForm } from './js/contact.js';
+import { initFooter } from './js/footer.js';
+
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('.nav');
@@ -8,17 +13,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// Add animation on scroll for service cards
+// Animation for service cards
 const observerOptions = {
     threshold: 0.2
 };
@@ -39,22 +34,10 @@ document.querySelectorAll('.service-card').forEach(card => {
     observer.observe(card);
 });
 
-
-const aboutSection = document.querySelector('.about-description');
-if (aboutSection) {
-    aboutSection.style.opacity = '0';
-    aboutSection.style.transform = 'translateY(20px)';
-    aboutSection.style.transition = 'all 0.8s ease-out';
-    
-    const aboutObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.2 });
-
-    aboutObserver.observe(aboutSection);
-}
-
+// Initialize all modules when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initNavigation();
+    initTabs();
+    initContactForm();
+    initFooter();
+});

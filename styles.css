@@ -161,3 +161,43 @@
       }
     }
     
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; /* Adjust based on your navbar height */
+  }
+  
+  /* Navigation active state */
+  .nav-links a.active,
+  .footer-links a.active {
+      color: var(--primary-turquoise);
+      font-weight: 600;
+  }
+  
+  /* Smooth transitions for links */
+  .nav-links a,
+  .footer-links a {
+      transition: all 0.3s ease;
+      position: relative;
+  }
+  
+  .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-turquoise);
+      transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover::after,
+  .nav-links a.active::after {
+      width: 100%;
+  }
+  
+  /* Ensure sections have proper spacing */
+  section {
+      scroll-margin-top: 80px; /* Matches scroll-padding-top */
+  }
