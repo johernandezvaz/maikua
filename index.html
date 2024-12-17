@@ -14,10 +14,16 @@
   <nav class="nav">
     <div class="nav-content">
         <img src="assets/maikua_logo.png" alt="Maikua Logo" class="nav-logo">
-        <div class="nav-links">
+        <button class="mobile-menu-btn"  id="menuToggle"  aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="nav-links" id="navLinks">
             <a href="#inicio">Inicio</a>
             <a href="#about">Nosotros</a>
             <a href="#services">Servicios</a>
+            <a href="#research">Investigación</a>
             <a href="#contacto">Contacto</a>
         </div>
     </div>
@@ -491,7 +497,8 @@
         </div>
       </footer>
 
-    <script src="main.js"></script>
-    <script src="js/navigation.js"></script>
+      <script src="js/navigation.js"></script>
+      <script src="js/mobileMenu.js"></script>
+      <script src="main.js"></script>
 </body>
 </html>

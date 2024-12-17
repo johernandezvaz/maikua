@@ -1,22 +1,125 @@
 @import '../variables.css';
 
+/* General responsive styles */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  :root {
+    --spacing-xl: 4rem;
+    --spacing-lg: 2.5rem;
+    --spacing-md: 1.5rem;
+    --spacing-sm: 0.8rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .research-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .tech-areas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
-  .about-container {
+  :root {
+    --spacing-xl: 3rem;
+    --spacing-lg: 2rem;
+    --spacing-md: 1.2rem;
+    --spacing-sm: 0.6rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .about-container,
+  .tech-areas,
+  .stats-grid {
     grid-template-columns: 1fr;
   }
-  
-  .about-title {
+
+  .services {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .contact-form {
+    padding: var(--spacing-md);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
     text-align: center;
-    position: static;
-    margin-bottom: var(--spacing-lg);
   }
-  
-  .tabs-navigation {
-    flex-wrap: wrap;
+
+  .footer-nav h3::after {
+    left: 50%;
+    transform: translateX(-50%);
   }
-  
-  .tab-button {
-    flex: 1 1 auto;
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .research-description,
+  .blog-description,
+  .coming-soon-text {
+    font-size: 1rem;
+  }
+
+  .section-title,
+  .research-title,
+  .blog-title,
+  .testimonials-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .contact-info {
+    padding: var(--spacing-sm);
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
+
+  .info-icon {
+    margin-bottom: var(--spacing-sm);
+    margin-right: 0;
+  }
+}
+
+/* Prevent scroll when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
 }

@@ -1,7 +1,12 @@
-import { initNavigation } from './js/navigation.js';
-import { initTabs } from './js/tabs.js';
-import { initContactForm } from './js/contact.js';
-import { initFooter } from './js/footer.js';
+
+// Initialize all modules when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    initNavigation();
+    initTabs();
+    initContactForm();
+    initFooter();
+    initMobileMenu();
+});
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
@@ -34,10 +39,24 @@ document.querySelectorAll('.service-card').forEach(card => {
     observer.observe(card);
 });
 
-// Initialize all modules when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    initNavigation();
-    initTabs();
-    initContactForm();
-    initFooter();
-});
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const body = document.body;
+  
+    menuToggle.addEventListener("click", function () {
+      // Alternar la clase 'active' en el botón y en los enlaces
+      menuToggle.classList.toggle("active");
+      navLinks.classList.toggle("active");
+      body.classList.toggle("menu-open");
+    });
+  
+    // Cerrar el menú si se hace clic en un enlace
+    navLinks.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") {
+        menuToggle.classList.remove("active");
+        navLinks.classList.remove("active");
+        body.classList.remove("menu-open");
+      }
+    });
+  });
