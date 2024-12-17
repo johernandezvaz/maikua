@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maikua - Innovación con Raíces</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon/favicon-32x32.png">
@@ -390,6 +391,32 @@
             </form>
           </div>
         </div>
+        <script>
+          // Inicializar EmailJS con tu Public Key
+          (function() {
+            emailjs.init("gH4-kfFad9dXXPmMq"); // Reemplaza "public_xxx" con tu Public Key
+          })();
+          
+          document.addEventListener("DOMContentLoaded", function () {
+            // Seleccionar el formulario
+            const form = document.querySelector(".contact-form");
+      
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
+      
+              // Enviar los datos del formulario a EmailJS
+              emailjs.sendForm("service_5s1da8u", "template_lzgilj5", form) // Reemplaza "service_xxx" y "template_xxx"
+                .then(function (response) {
+                  console.log("Correo enviado con éxito:", response.status, response.text);
+                  alert("¡Tu mensaje ha sido enviado con éxito!");
+                  form.reset(); // Limpiar el formulario
+                }, function (error) {
+                  console.error("Error al enviar el correo:", error);
+                  alert("Hubo un problema al enviar tu mensaje. Inténtalo de nuevo más tarde.");
+                });
+            });
+          });
+        </script>
       </section>
 
       <footer class="footer">
