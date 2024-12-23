@@ -1,11 +1,20 @@
 
 // Initialize all modules when DOM is loaded
+import { initProjectTabs } from './js/projectTabs.js';
+import { initMobileMenu } from './js/mobileMenu.js';
+import { initNavigation } from './js/navigation.js';
+import { initTabs } from './js/tabs.js';
+import { initContactForm } from './js/contact.js';
+import { initFooter } from './js/footer.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing project tabs...');
     initNavigation();
     initTabs();
     initContactForm();
     initFooter();
     initMobileMenu();
+    initProjectTabs();
 });
 
 // Navbar scroll effect
@@ -60,3 +69,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
