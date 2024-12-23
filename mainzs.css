@@ -2,7 +2,7 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 @import 'styles/variables.css';
 @import 'styles/layout.css';
-@import 'styles/components/header.css'; /* Añadido el nuevo componente header */
+@import 'styles/components/headers.css'; /* Añadido el nuevo componente header */
 @import 'styles/components/nav.css';
 @import 'styles/components/about.css';
 @import 'styles/components/tabs.css';
