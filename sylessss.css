@@ -2,7 +2,7 @@
 @import '@fortawesome/fontawesome-free/css/all.min.css';
 @import 'styles/variables.css';
 @import 'styles/layout.css';
-@import 'styles/components/headers.css'; /* Añadido el nuevo componente header */
+@import 'styles/components/headerz.css'; /* Añadido el nuevo componente header */
 @import 'styles/components/nav.css';
 @import 'styles/components/about.css';
 @import 'styles/components/tabs.css';
@@ -10,12 +10,12 @@
 @import 'styles/components/projects.css';
 @import 'styles/components/projectTabs.css';
 @import 'styles/components/researchs.css';
-@import 'styles/components/testimonials.css';
-@import 'styles/components/blog.css';
+@import 'styles/components/testimonialz.css';
+@import 'styles/components/blogz.css';
 @import 'styles/components/contacts.css';
 @import 'styles/components/footer.css';
 @import 'styles/components/prcing.css';
-@import 'styles/utils/responsiveness.css';
+@import 'styles/utils/responsivenesz.css';
 @import 'styles/components/legal.css';
 
 

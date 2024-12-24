@@ -320,6 +320,8 @@ body.menu-open {
 
   .hero-content {
     padding: var(--spacing-lg) var(--spacing-md);
+    width: 100%;
+    height: 100%;
   }
 
   .hero-definition {
@@ -349,6 +351,8 @@ body.menu-open {
 @media (max-width: 480px) {
   .hero-content {
     padding: var(--spacing-md);
+    width: 100%;
+    height: 100%;
   }
 
   .hero-title {
@@ -384,6 +388,11 @@ body.menu-open {
 
   .definition-text {
     font-size: 0.85rem;
+  }
+
+  .hero-content{
+    height: 100%;
+    width: 100%;
   }
 }
 
