@@ -16,7 +16,7 @@
 @import 'styles/components/footer.css';
 @import 'styles/components/prcing.css';
 @import 'styles/utils/responsiveness.css';
-
+@import 'styles/components/legal.css';
 
 
 
@@ -270,3 +270,5 @@
           overflow: hidden;
       }
   }
+
+  
