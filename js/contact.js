@@ -1,62 +1,58 @@
+import { EMAILJS_CONFIG } from '../config/emailjs.js';
+
 export function initContactForm() {
     const form = document.querySelector('.contact-form');
+    const contactModal = document.getElementById('contactModal');
     
-    if (form) {
-      const subjectSelect = form.querySelector('#subject');
-      const messageTextarea = form.querySelector('#message');
-      
-      // Add placeholder text based on selected subject
-      subjectSelect.addEventListener('change', (e) => {
-        const subject = e.target.value;
-        let placeholder = '';
-        
-        switch(subject) {
-          case 'cotizacion':
-            placeholder = 'Por favor, describe el proyecto o servicio para el que necesitas una cotización...';
-            break;
-          case 'soporte':
-            placeholder = 'Describe el problema técnico que estás experimentando...';
-            break;
-          case 'proyecto':
-            placeholder = 'Cuéntanos sobre tu proyecto y cómo podemos ayudarte...';
-            break;
-          case 'colaboracion':
-            placeholder = 'Describe tu propuesta de colaboración...';
-            break;
-          case 'empleo':
-            placeholder = 'Cuéntanos sobre tu experiencia y el área en la que te gustaría trabajar...';
-            break;
-          case 'otro':
-            placeholder = 'Escribe tu mensaje...';
-            break;
-          default:
-            placeholder = 'Por favor, selecciona un asunto antes de escribir tu mensaje...';
-        }
-        
-        messageTextarea.placeholder = placeholder;
-      });
-  
-      form.addEventListener('submit', async (e) => {
+    if (!form) return;
+
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+
+    function showSuccessModal() {
+        contactModal.style.display = 'block';
+        contactModal.querySelector('.modal-content').innerHTML = `
+            <h3>¡Mensaje Enviado!</h3>
+            <p>Gracias por contactarnos. Te responderemos lo antes posible.</p>
+            <button class="success-close" onclick="document.getElementById('contactModal').style.display='none'">
+                Cerrar
+            </button>
+        `;
+    }
+
+    function showErrorModal() {
+        contactModal.style.display = 'block';
+        contactModal.querySelector('.modal-content').innerHTML = `
+            <h3>Error al enviar mensaje</h3>
+            <p>Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.</p>
+            <button class="success-close" onclick="document.getElementById('contactModal').style.display='none'">
+                Cerrar
+            </button>
+        `;
+    }
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
-        
-        // Here you would typically send the data to your backend
-        console.log('Form submitted:', data);
-        
-        // Show success message
-        const submitButton = form.querySelector('.submit-button');
-        const originalText = submitButton.textContent;
-        submitButton.textContent = '¡Mensaje Enviado!';
-        submitButton.disabled = true;
-        
-        setTimeout(() => {
-          submitButton.textContent = originalText;
-          submitButton.disabled = false;
-          form.reset();
-          messageTextarea.placeholder = 'Por favor, selecciona un asunto antes de escribir tu mensaje...';
-        }, 3000);
-      });
+        try {
+            await emailjs.sendForm(
+                EMAILJS_CONFIG.SERVICE_ID,
+                EMAILJS_CONFIG.TEMPLATES.CONTACT_FORM,
+                form
+            );
+            
+            showSuccessModal();
+            form.reset();
+            
+        } catch (error) {
+            console.error('Error al enviar email:', error);
+            showErrorModal();
+        }
+    });
+
+    // Cerrar modal al hacer clic fuera
+    window.onclick = function(event) {
+        if (event.target == contactModal) {
+            contactModal.style.display = 'none';
+        }
     }
-  }
+}

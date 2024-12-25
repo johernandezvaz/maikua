@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maikua -IA & Desarrollo Web</title>
-    <link rel="stylesheet" href="sylessss.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="sty.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Favicon principal -->
@@ -26,21 +28,25 @@
 <body>
   <nav class="nav">
     <div class="nav-content">
-        <img src="assets/maikua_logo.png" alt="Maikua Logo" class="nav-logo">
-        <button class="mobile-menu-btn"  id="menuToggle"  aria-label="Menu">
+        <a href="/" class="nav-logo">
+            <img src="/assets/maikua_logo.png" alt="Maikua Logo">
+        </a>
+        <button class="mobile-menu-btn" aria-label="Menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
-        <div class="nav-links" id="navLinks">
+        <div class="nav-links">
             <a href="#inicio">Inicio</a>
             <a href="#about">Nosotros</a>
             <a href="#services">Servicios</a>
             <a href="#research">Investigación</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#blog">Blog</a>
             <a href="#contacto">Contacto</a>
         </div>
     </div>
-  </nav>
+</nav>
 
   <header class="header" id="inicio">
     <div class="video-background">
@@ -284,48 +290,95 @@
     </section>
 
     <section class="blog-section" id="blog">
-        <div class="blog-container">
-            <h2 class="blog-title">Blog</h2>
-            <div class="blog-coming-soon">
-                <div class="blog-icon">
-                    <i class="fas fa-newspaper"></i>
-                </div>
-                <h3 class="blog-coming-soon-title">Próximamente</h3>
-                <p class="blog-description">
-                    Estamos preparando un espacio dedicado a compartir conocimiento sobre tecnología, 
-                    innovación, aplicaciones de sistemas embebidos, tendencias en IA y casos de uso 
-                    de dispositivos. Mantente atento para descubrir artículos interesantes, novedades 
-                    del sector y actualizaciones sobre nuestros productos.
-                </p>
-                <div class="blog-categories">
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-microchip"></i>
-                        </div>
-                        <h4 class="category-title">Internet de las Cosas</h4>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h4 class="category-title">Inteligencia Artificial</h4>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h4 class="category-title">Innovación</h4>
-                    </div>
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h4 class="category-title">Casos de Uso</h4>
-                    </div>
-                </div>
+      <div class="blog-container">
+          <h2 class="blog-title">Nuestro Blog</h2>
+          <p class="blog-subtitle">Compartiendo conocimiento sobre tecnología e innovación</p>
+          
+          <div class="blog-categories-nav">
+              <button class="category-btn active" data-category="all">Todos</button>
+              <button class="category-btn" data-category="ia">Inteligencia Artificial</button>
+              <button class="category-btn" data-category="desarrollo web">Desarrollo Web</button>
+              <button class="category-btn" data-category="iot">IoT</button>
+          </div>
+  
+          <div class="blog-grid">
+              <!-- Featured Post - Web Development -->
+              <article class="blog-card featured">
+                  <div class="card-content">
+                      <div class="card-meta">
+                          <span class="category">Desarrollo Web</span>
+                          <span class="date">Próximamente</span>
+                      </div>
+                      <h3>Arquitecturas Modernas en Desarrollo Web</h3>
+                      <p>Exploraremos las últimas tendencias en arquitecturas web, desde microservicios hasta JAMstack.</p>
+                      <div class="card-tags">
+                          <span>#Frontend</span>
+                          <span>#Backend</span>
+                          <span>#Arquitectura</span>
+                      </div>
+                  </div>
+              </article>
+  
+              <!-- Regular Posts -->
+              <article class="blog-card">
+                  <div class="card-content">
+                      <div class="card-meta">
+                          <span class="category">IA</span>
+                          <span class="date">Próximamente</span>
+                      </div>
+                      <h3>Machine Learning en la Industria</h3>
+                      <p>Casos prácticos de implementación de ML en diferentes sectores industriales.</p>
+                  </div>
+              </article>
+  
+              <article class="blog-card">
+                  <div class="card-content">
+                      <div class="card-meta">
+                          <span class="category">Desarrollo Web</span>
+                          <span class="date">Próximamente</span>
+                      </div>
+                      <h3>Performance Web</h3>
+                      <p>Técnicas y mejores prácticas para optimizar el rendimiento de aplicaciones web.</p>
+                  </div>
+              </article>
+  
+              <article class="blog-card">
+                  <div class="card-content">
+                      <div class="card-meta">
+                          <span class="category">IoT</span>
+                          <span class="date">Próximamente</span>
+                      </div>
+                      <h3>IoT en Smart Cities</h3>
+                      <p>Implementaciones innovadoras de IoT en ciudades inteligentes.</p>
+                  </div>
+              </article>
+          </div>
+  
+          <div class="blog-footer">
+            <p class="coming-soon-text">¡Suscríbete para recibir notificaciones cuando publiquemos nuevo contenido!</p>
+            <button id="subscribeBtn" class="subscribe-btn">
+                <i class="fas fa-envelope"></i> Suscribirse
+            </button>
+        </div>
+
+          <div id="subscriptionModal" class="modal">
+            <div class="modal-content">
+                <h3>Suscríbete a nuestro blog</h3>
+                <p>Recibe actualizaciones sobre nuestras últimas publicaciones.</p>
+                <form id="subscriptionForm">
+                    <input 
+                        type="email" 
+                        name="subscriber_email" 
+                        placeholder="Tu correo electrónico" 
+                        required
+                    >
+                    <button type="submit" class="submit-btn">Suscribirse</button>
+                </form>
             </div>
         </div>
-    </section>
+
+      </div>
+  </section>
 
 
 
@@ -412,32 +465,6 @@
             </form>
           </div>
         </div>
-        <script>
-          // Inicializar EmailJS con tu Public Key
-          (function() {
-            emailjs.init("gH4-kfFad9dXXPmMq"); // Reemplaza "public_xxx" con tu Public Key
-          })();
-          
-          document.addEventListener("DOMContentLoaded", function () {
-            // Seleccionar el formulario
-            const form = document.querySelector(".contact-form");
-      
-            form.addEventListener("submit", function (e) {
-              e.preventDefault();
-      
-              // Enviar los datos del formulario a EmailJS
-              emailjs.sendForm("service_5s1da8u", "template_lzgilj5", form) // Reemplaza "service_xxx" y "template_xxx"
-                .then(function (response) {
-                  console.log("Correo enviado con éxito:", response.status, response.text);
-                  alert("¡Tu mensaje ha sido enviado con éxito!");
-                  form.reset(); // Limpiar el formulario
-                }, function (error) {
-                  console.error("Error al enviar el correo:", error);
-                  alert("Hubo un problema al enviar tu mensaje. Inténtalo de nuevo más tarde.");
-                });
-            });
-          });
-        </script>
       </section>
 
       <footer class="footer">
@@ -516,7 +543,6 @@
       </footer>
 
  
-      <script type="module" src="legalModal.js"></script>
-      <script type="module" src="mains.js"></script>
+      <script type="module" src="/ma.js"></script>
 </body>
 </html>

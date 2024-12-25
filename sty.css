@@ -1,0 +1,46 @@
+/* Base styles */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import 'styles/variables.css';
+@import 'styles/layout.css';
+@import 'styles/components/headerz.css';
+@import 'styles/components/na.css';
+@import 'styles/components/about.css';
+@import 'styles/components/tabs.css';
+@import 'styles/components/serv.css';
+@import 'styles/components/projects.css';
+@import 'styles/components/projectTabs.css';
+@import 'styles/components/researchs.css';
+@import 'styles/components/testimonialz.css';
+@import 'styles/components/blo.css';
+@import 'styles/components/cont.css';
+@import 'styles/components/footer.css';
+@import 'styles/components/prcing.css';
+@import 'styles/utils/responsivenesz.css';
+@import 'styles/components/legal.css';
+@import 'styles/components/subscription-modal.css';
+
+:root {
+    --primary-red: #E94E4E;
+    --primary-turquoise: #2A9D8F;
+    --primary-brown: #8B4513;
+    --bg-cream: #FAF9F6;
+    --text-dark: #2C3E50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
