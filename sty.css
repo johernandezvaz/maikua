@@ -17,7 +17,9 @@
 @import 'styles/components/prcing.css';
 @import 'styles/utils/responsivenesz.css';
 @import 'styles/components/legal.css';
+@import 'styles/components/bio.css';
 @import 'styles/components/subscription-modal.css';
+@import 'styles/components/blog-article.css';
 
 :root {
     --primary-red: #E94E4E;
