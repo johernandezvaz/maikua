@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Go, Python o Rust para el Backend? - Maikua</title>
+    <link rel="stylesheet" href="/maini.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <style>
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background: var(--primary-turquoise);
+            color: white;
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .comparison-table td:first-child {
+            font-weight: 500;
+            color: var(--primary-turquoise);
+        }
+
+        @media (max-width: 768px) {
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="/" class="nav-logo">
+                <img src="/assets/maikua_logo.png" alt="Maikua Logo">
+            </a>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links">
+                <a href="/">Inicio</a>
+                <a href="/#about">Nosotros</a>
+                <a href="/#services">Servicios</a>
+                <a href="/#research">Investigación</a>
+                <a href="/#projects">Proyectos</a>
+                <a href="/#blog">Blog</a>
+                <a href="/#contacto">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <article class="blog-article">
+        <div class="article-header">
+            <div class="article-meta">
+                <span class="category">Desarrollo</span>
+                <span class="date">Febrero 2024</span>
+            </div>
+            <h1>¿Go, Python o Rust para el Backend? Descubre cuál es el mejor para tu proyecto</h1>
+            <div class="article-tags">
+                <span>#Backend</span>
+                <span>#Go</span>
+                <span>#Python</span>
+                <span>#Rust</span>
+            </div>
+        </div>
+
+        <div class="article-content">
+            <p class="article-intro">
+                En Maikua, siempre estamos explorando las mejores tecnologías para ofrecer soluciones innovadoras y eficientes. Cuando se trata de elegir el lenguaje de programación adecuado para el backend de una aplicación, Go, Python, y Rust son opciones populares, cada una con sus propias ventajas. Pero, ¿cuál es la mejor opción para tu proyecto? A continuación, te presentamos una comparación detallada para ayudarte a decidir.
+            </p>
+
+            <section class="article-section">
+                <h2>Comparación de Go, Python y Rust</h2>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Go</th>
+                            <th>Python</th>
+                            <th>Rust</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Desempeño</td>
+                            <td>Alta, gracias a su compilación rápida y eficiencia en ejecución</td>
+                            <td>Moderada, ideal para tareas que no requieren alto rendimiento</td>
+                            <td>Muy alta, optimizado para sistemas críticos donde la eficiencia es clave</td>
+                        </tr>
+                        <tr>
+                            <td>Facilidad de aprendizaje</td>
+                            <td>Relativamente fácil, con una sintaxis simple y minimalista</td>
+                            <td>Muy fácil, conocido por su simplicidad y gran comunidad de soporte</td>
+                            <td>Moderada, debido a su enfoque en la seguridad y el manejo manual de memoria</td>
+                        </tr>
+                        <tr>
+                            <td>Concurrencia</td>
+                            <td>Soporte robusto con goroutines y canales</td>
+                            <td>Limitada, pero funcional con asyncio</td>
+                            <td>Muy alta, con enfoque en seguridad concurrente</td>
+                        </tr>
+                        <tr>
+                            <td>Ecosistema</td>
+                            <td>En crecimiento, ideal para servicios web</td>
+                            <td>Muy amplio, con librerías para todo tipo de aplicaciones</td>
+                            <td>En desarrollo, enfocado en sistemas embebidos</td>
+                        </tr>
+                        <tr>
+                            <td>Seguridad</td>
+                            <td>Buena, con manejo de memoria seguro</td>
+                            <td>Moderada, propenso a errores de runtime</td>
+                            <td>Excelente, con sistema de tipos seguro</td>
+                        </tr>
+                        <tr>
+                            <td>Escalabilidad</td>
+                            <td>Muy alta, diseñado para sistemas escalables</td>
+                            <td>Moderada, adecuado para aplicaciones medianas</td>
+                            <td>Muy alta, con control fino de recursos</td>
+                        </tr>
+                        <tr>
+                            <td>Tiempo de desarrollo</td>
+                            <td>Rápido, compilación eficiente</td>
+                            <td>Muy rápido, desarrollo ágil</td>
+                            <td>Moderado, enfoque en seguridad</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="article-section">
+                <h2>Mejores usos para cada lenguaje</h2>
+                
+                <h3>Go</h3>
+                <ul>
+                    <li>Microservicios y sistemas distribuidos</li>
+                    <li>Aplicaciones web que necesitan manejar una alta carga de solicitudes</li>
+                    <li>Proyectos donde la concurrencia y el tiempo de desarrollo rápido son claves</li>
+                </ul>
+
+                <h3>Python</h3>
+                <ul>
+                    <li>Aplicaciones de aprendizaje automático, análisis de datos y ciencia de datos</li>
+                    <li>Prototipos rápidos y desarrollo ágil</li>
+                    <li>Proyectos donde la comunidad y la disponibilidad de librerías son esenciales</li>
+                </ul>
+
+                <h3>Rust</h3>
+                <ul>
+                    <li>Sistemas embebidos y software de bajo nivel</li>
+                    <li>Aplicaciones donde la seguridad y el rendimiento son críticos</li>
+                    <li>Proyectos que requieren un control preciso del uso de recursos</li>
+                </ul>
+            </section>
+
+            <section class="article-section conclusion">
+                <h2>Conclusión</h2>
+                <p>La elección entre Go, Python y Rust depende de las necesidades específicas de tu proyecto. Si buscas simplicidad y velocidad en el desarrollo, Python es una opción excelente. Si tu prioridad es el rendimiento y la escalabilidad, Go es una gran elección. Por otro lado, si trabajas en sistemas críticos donde la seguridad y el control del hardware son primordiales, Rust será tu mejor aliado.</p>
+                <p>En Maikua, entendemos que cada proyecto es único y requiere un enfoque personalizado. Si necesitas ayuda para decidir cuál es el mejor lenguaje para tu backend, no dudes en contactarnos. Estamos aquí para ayudarte a construir soluciones tecnológicas sólidas y eficientes.</p>
+            </section>
+        </div>
+
+        <div class="article-footer">
+            <div class="share-buttons">
+                <span>Comparte este artículo:</span>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.maikua.com.mx%2Fpages%2Fblog%2Fbackend-comparison.html" target="_blank" class="share-button" aria-label="Compartir en Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </div>
+            <a href="/#blog" class="back-to-blog">
+                <i class="fas fa-arrow-left"></i> Volver al blog
+            </a>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/assets/white_logo.png" alt="Logo">
+                        <span class="footer-logo-text">Maikua</span>
+                    </div>
+                    <p class="footer-description">
+                        Fusionamos tecnología innovadora con un compromiso profundo hacia la investigación y el desarrollo de soluciones digitales.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61570268176249" target="_blank" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/maikua.iot/?hl=es-la" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="footer-nav">
+                    <h3>Navegación</h3>
+                    <ul class="footer-links">
+                        <li><a href="/#inicio"><i class="fas fa-chevron-right"></i>Inicio</a></li>
+                        <li><a href="/#services"><i class="fas fa-chevron-right"></i>Servicios</a></li>
+                        <li><a href="/#projects"><i class="fas fa-chevron-right"></i>Proyectos</a></li>
+                        <li><a href="/#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
+                        <li><a href="/#contacto"><i class="fas fa-chevron-right"></i>Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="footer-nav">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="/pages/privacidad.html"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+                        <li><a href="/pages/terminos.html"><i class="fas fa-gavel"></i>Términos y Condiciones</a></li>
+                        <li><a href="/pages/cookies.html"><i class="fas fa-cookie"></i>Política de Cookies</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2024</span> Maikua Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/ma.js"></script>
+</body>
+</html>
