@@ -105,65 +105,172 @@
             <p class="article-intro">
                 En Maikua, siempre estamos explorando las mejores tecnologías para ofrecer soluciones innovadoras y eficientes. Cuando se trata de elegir el lenguaje de programación adecuado para el backend de una aplicación, Go, Python, y Rust son opciones populares, cada una con sus propias ventajas. Pero, ¿cuál es la mejor opción para tu proyecto? A continuación, te presentamos una comparación detallada para ayudarte a decidir.
             </p>
+            
 
             <section class="article-section">
                 <h2>Comparación de Go, Python y Rust</h2>
                 
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Característica</th>
-                            <th>Go</th>
-                            <th>Python</th>
-                            <th>Rust</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Desempeño</td>
-                            <td>Alta, gracias a su compilación rápida y eficiencia en ejecución</td>
-                            <td>Moderada, ideal para tareas que no requieren alto rendimiento</td>
-                            <td>Muy alta, optimizado para sistemas críticos donde la eficiencia es clave</td>
-                        </tr>
-                        <tr>
-                            <td>Facilidad de aprendizaje</td>
-                            <td>Relativamente fácil, con una sintaxis simple y minimalista</td>
-                            <td>Muy fácil, conocido por su simplicidad y gran comunidad de soporte</td>
-                            <td>Moderada, debido a su enfoque en la seguridad y el manejo manual de memoria</td>
-                        </tr>
-                        <tr>
-                            <td>Concurrencia</td>
-                            <td>Soporte robusto con goroutines y canales</td>
-                            <td>Limitada, pero funcional con asyncio</td>
-                            <td>Muy alta, con enfoque en seguridad concurrente</td>
-                        </tr>
-                        <tr>
-                            <td>Ecosistema</td>
-                            <td>En crecimiento, ideal para servicios web</td>
-                            <td>Muy amplio, con librerías para todo tipo de aplicaciones</td>
-                            <td>En desarrollo, enfocado en sistemas embebidos</td>
-                        </tr>
-                        <tr>
-                            <td>Seguridad</td>
-                            <td>Buena, con manejo de memoria seguro</td>
-                            <td>Moderada, propenso a errores de runtime</td>
-                            <td>Excelente, con sistema de tipos seguro</td>
-                        </tr>
-                        <tr>
-                            <td>Escalabilidad</td>
-                            <td>Muy alta, diseñado para sistemas escalables</td>
-                            <td>Moderada, adecuado para aplicaciones medianas</td>
-                            <td>Muy alta, con control fino de recursos</td>
-                        </tr>
-                        <tr>
-                            <td>Tiempo de desarrollo</td>
-                            <td>Rápido, compilación eficiente</td>
-                            <td>Muy rápido, desarrollo ágil</td>
-                            <td>Moderado, enfoque en seguridad</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="comparison-tabs">
+                    <div class="comparison-nav">
+                        <button class="comparison-tab active" data-tab="desempeno">Desempeño</button>
+                        <button class="comparison-tab" data-tab="aprendizaje">Facilidad de aprendizaje</button>
+                        <button class="comparison-tab" data-tab="concurrencia">Concurrencia</button>
+                        <button class="comparison-tab" data-tab="ecosistema">Ecosistema</button>
+                        <button class="comparison-tab" data-tab="seguridad">Seguridad</button>
+                        <button class="comparison-tab" data-tab="escalabilidad">Escalabilidad</button>
+                        <button class="comparison-tab" data-tab="desarrollo">Tiempo de desarrollo</button>
+                    </div>
+                    
+                    <div class="comparison-content">
+                        <div class="comparison-panel active" id="desempeno">
+                            <h3>Desempeño</h3>
+                            <div class="language-comparison">
+                                <div class="language-card">
+                                    <h4>Go</h4>
+                                    <p>Alta, gracias a su compilación rápida y eficiencia en ejecución</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Python</h4>
+                                    <p>Moderada, ideal para tareas que no requieren alto rendimiento</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Rust</h4>
+                                    <p>Muy alta, optimizado para sistemas críticos donde la eficiencia es clave</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-panel" id="aprendizaje">
+                            <h3>Facilidad de aprendizaje</h3>
+                            <div class="language-comparison">
+                                <div class="language-card">
+                                    <h4>Go</h4>
+                                    <p>Relativamente fácil, con una sintaxis simple y minimalista</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Python</h4>
+                                    <p>Muy fácil, conocido por su simplicidad y gran comunidad de soporte</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Rust</h4>
+                                    <p>Moderada, debido a su enfoque en la seguridad y el manejo manual de memoria</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="comparison-panel" id="concurrencia">
+                            <h3>Concurrencia</h3>
+                            <div class="language-comparison">
+                                <div class="language-card">
+                                    <h4>Go</h4>
+                                    <p>Soporte robusto con goroutines y canales, excelente para aplicaciones concurrentes</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Python</h4>
+                                    <p>Limitada, no es el punto fuerte de Python, pero puede manejar concurrencia con herramientas como asyncio</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Rust</h4>
+                                    <p>Muy alta, con un enfoque en la seguridad concurrente y un modelo de propiedad único</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="comparison-panel" id="ecosistema">
+                            <h3>Ecosistema</h3>
+                            <div class="language-comparison">
+                                <div class="language-card">
+                                    <h4>Go</h4>
+                                    <p>En crecimiento, ideal para servicios web y microservicios</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Python</h4>
+                                    <p>Muy amplio, con una enorme cantidad de librerías para todo tipo de aplicaciones</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Rust</h4>
+                                    <p>En desarrollo, con un enfoque en sistemas embebidos y aplicaciones de alto rendimiento</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="comparison-panel" id="seguridad">
+                            <h3>Seguridad</h3>
+                            <div class="language-comparison">
+                                <div class="language-card">
+                                    <h4>Go</h4>
+                                    <p>Buena, con un manejo de memoria más seguro que muchos lenguajes, pero sin el control explícito de Rust</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Python</h4>
+                                    <p>Moderada, es más propenso a errores de tiempo de ejecución</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Rust</h4>
+                                    <p>Excelente, con un sistema de tipos seguro que evita errores comunes como desbordamientos de buffer</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="comparison-panel" id="escalabilidad">
+                            <h3>Escalabilidad</h3>
+                            <div class="language-comparison">
+                                <div class="language-card">
+                                    <h4>Go</h4>
+                                    <p>Muy alta, diseñado para construir sistemas escalables desde el principio</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Python</h4>
+                                    <p>Moderada, adecuado para aplicaciones que crecen en complejidad pero no tanto en carga</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Rust</h4>
+                                    <p>Muy alta, ideal para aplicaciones que requieren un control fino sobre los recursos</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="comparison-panel" id="desarrollo">
+                            <h3>Tiempo de desarrollo</h3>
+                            <div class="language-comparison">
+                                <div class="language-card">
+                                    <h4>Go</h4>
+                                    <p>Rápido, gracias a su compilación rápida y simplicidad</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Python</h4>
+                                    <p>Muy rápido, con un desarrollo ágil gracias a su sintaxis sencilla y gran cantidad de recursos</p>
+                                </div>
+                                <div class="language-card">
+                                    <h4>Rust</h4>
+                                    <p>Moderado, el tiempo de desarrollo puede ser más largo debido a su enfoque en la seguridad y el control</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const tabs = document.querySelectorAll('.comparison-tab');
+                        const panels = document.querySelectorAll('.comparison-panel');
+                    
+                        tabs.forEach(tab => {
+                            tab.addEventListener('click', () => {
+                                // Desactivar todas las pestañas y paneles
+                                tabs.forEach(t => t.classList.remove('active'));
+                                panels.forEach(p => p.classList.remove('active'));
+                    
+                                // Activar la pestaña seleccionada y su panel correspondiente
+                                tab.classList.add('active');
+                                const panel = document.getElementById(tab.dataset.tab);
+                                if (panel) panel.classList.add('active');
+                            });
+                        });
+                    });
+                    </script>
             </section>
+
+            
 
             <section class="article-section">
                 <h2>Mejores usos para cada lenguaje</h2>
