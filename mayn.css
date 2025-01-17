@@ -10,7 +10,7 @@
 @import 'styles/components/projects.css';
 @import 'styles/components/projectTabs.css';
 @import 'styles/components/researchs.css';
-@import 'styles/components/testimonialz.css';
+@import 'styles/components/testimonialss.css';
 @import 'styles/components/blo.css';
 @import 'styles/components/cont.css';
 @import 'styles/components/footer.css';
@@ -21,6 +21,7 @@
 @import 'styles/components/subscription-modal.css';
 @import 'styles/components/blog-articles.css';
 @import 'styles/components/promo.css';
+@import 'styles/components/featured-projects.css';
 
 :root {
     --primary-red: #E94E4E;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maikua -IA & Desarrollo Web</title>
-    <link rel="stylesheet" href="mainii.css">
+    <link rel="stylesheet" href="mayn.css">
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
@@ -368,56 +368,161 @@
       </div>
   </div>
 </section>
+<section class="featured-projects" id="featured">
+    <div class="featured-container">
+        <div class="featured-header">
+            <h2 class="featured-title">Proyectos Destacados</h2>
+        </div>
 
-    <section class="testimonials-section" id="testimonials">
-        <div class="testimonials-container">
-            <h2 class="testimonials-title">Testimonios</h2>
-            
-            <div class="coming-soon-wrapper">
-                <div class="testimonial-icon">
-                    <i class="fas fa-quote-right"></i>
+        <div class="project-categories">
+            <button class="category-btn active" data-category="all">Todos</button>
+            <button class="category-btn" data-category="web">Sitios Web</button>
+            <button class="category-btn" data-category="mobile">Apps Móviles</button>
+            <button class="category-btn" data-category="desktop">Apps de Escritorio</button>
+        </div>
+
+        <div class="featured-grid">
+            <!-- Asecalab -->
+            <div class="featured-project" data-category="web">
+                <img src="assets/projects/ASE-CA LAB-02.png" alt="Asecalab Website" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Asecalab</h3>
+                    <p class="project-description">
+                        Sitio web corporativo para laboratorio de pruebas mecanicas.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <a href="https://www.asecalab.com.mx" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Visitar sitio <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <h3 class="coming-soon-title">Próximamente Historias de Éxito</h3>
-                <p class="coming-soon-text">
-                    En Maikua, nos dedicamos a crear soluciones que transforman negocios y mejoran vidas. 
-                    Pronto compartiremos las historias de éxito de nuestros clientes y su experiencia 
-                    con nuestras soluciones tecnológicas innovadoras.
-                </p>
-                
-                <div class="future-testimonials">
-                    <div class="testimonial-placeholder">
-                        <div class="placeholder-avatar">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <div class="placeholder-text"></div>
-                        <div class="placeholder-text"></div>
-                        <div class="placeholder-text name"></div>
-                        <div class="placeholder-text company"></div>
+            </div>
+
+            <!-- Noubeau -->
+            <div class="featured-project" data-category="web">
+                <img src="assets/projects/noubeau_logo.png" alt="Noubeau Website" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Noubeau</h3>
+                    <p class="project-description">
+                        Sitio web corporativo para agencia de publlicidad y desarrollo.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
                     </div>
-                    
-                    <div class="testimonial-placeholder">
-                        <div class="placeholder-avatar">
-                            <i class="fas fa-industry"></i>
-                        </div>
-                        <div class="placeholder-text"></div>
-                        <div class="placeholder-text"></div>
-                        <div class="placeholder-text name"></div>
-                        <div class="placeholder-text company"></div>
+                    <a href="https://www.noubeau.com" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Visitar sitio <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- App Móvil -->
+            <div class="featured-project" data-category="mobile">
+                <div class="mobile-screenshots">
+                    <img src="assets/projects/fabrica_sabores_01.jpeg" alt="App Screenshot 1" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_02.jpeg" alt="App Screenshot 2" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_03.jpeg" alt="App Screenshot 3" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_04.jpeg" alt="App Screenshot 4" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_05.jpeg" alt="App Screenshot 5" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_06.jpeg" alt="App Screenshot 6" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_07.jpeg" alt="App Screenshot 7" class="mobile-screenshot">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">La Fabrica de Sabores</h3>
+                    <p class="project-description">
+                        Aplicación de gestión de pedidos y gastos de una reposteria
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">Supabase</span>
+                        <span class="project-tag">Android</span>
                     </div>
-                    
-                    <div class="testimonial-placeholder">
-                        <div class="placeholder-avatar">
-                            <i class="fas fa-store"></i>
-                        </div>
-                        <div class="placeholder-text"></div>
-                        <div class="placeholder-text"></div>
-                        <div class="placeholder-text name"></div>
-                        <div class="placeholder-text company"></div>
+                </div>
+            </div>
+
+            <!-- App de Escritorio -->
+            <div class="featured-project" data-category="desktop">
+                <div class="desktop-screenshots">
+                    <img src="assets/projects/perfiles_python_01.png" alt="Desktop App Screenshot 1" class="desktop-screenshot">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Calculadora de Perfiles</h3>
+                    <p class="project-description">
+                        Aplicación de calculo de uso de perfiles, residuo y desperdicio total para versión de escritorio
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">PySide6</span>
+                        <span class="project-tag">Windows</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section class="testimonials-section" id="testimonials">
+  <div class="testimonials-container">
+      <h2 class="testimonials-title">Lo que dicen nuestros clientes</h2>
+      
+      <div class="testimonials-grid">
+          <!-- Ase-Ca-Lab Testimonial -->
+          <div class="testimonial-card">
+              <div class="testimonial-header">
+                  <img src="assets/clients/ASE-CA LAB-02.png" alt="Ase-Ca-Lab Logo" class="client-logo">
+                  <div class="testimonial-meta">
+                      <h3>Ase-Ca-Lab</h3>
+                      <span class="client-type">Laboratorio de Pruebas Mecánicas</span>
+                  </div>
+              </div>
+              <div class="testimonial-content">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p>Cuando comenzamos con Maikua, nuestro laboratorio de pruebas mecánicas, Ase-Ca-Lab, apenas estaba arrancando. Necesitábamos un sitio web que no solo reflejara nuestra profesionalidad, sino que también ayudara a atraer clientes. Maikua entendió nuestras necesidades desde el principio y nos ofreció una solución a medida. Gracias a su excepcional trabajo, nuestro sitio web ha sido una puerta de entrada para nuevos clientes, permitiéndonos crecer más rápido de lo que esperábamos. Hoy en día, muchos de nuestros clientes nos encuentran y nos contactan directamente a través de la web que Maikua creó. No podríamos estar más agradecidos.</p>
+              </div>
+              <a href="https://www.asecalab.com.mx" target="_blank" rel="noopener noreferrer" class="testimonial-link">
+                  Ver proyecto <i class="fas fa-external-link-alt"></i>
+              </a>
+          </div>
+
+          <!-- Noubeau Testimonial -->
+          <div class="testimonial-card">
+              <div class="testimonial-header">
+                  <img src="assets/clients/noubeau_logo.png" alt="Noubeau Logo" class="client-logo">
+                  <div class="testimonial-meta">
+                      <h3>Noubeau</h3>
+                      <span class="client-type">E-commerce de Belleza</span>
+                  </div>
+              </div>
+              <div class="testimonial-content">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p>Como empresa emergente, Noubeau enfrentaba el desafío de no contar con el equipo ni la infraestructura necesarios para desarrollar nuestro sitio web. Buscábamos una solución que nos permitiera iniciar sin complicaciones y dentro de nuestro presupuesto. Maikua fue la respuesta perfecta. Nos ofrecieron cotizaciones personalizadas y un diseño que se ajustaba a nuestras necesidades específicas. Gracias a ellos, nuestro sitio web no solo es funcional, sino que también transmite la esencia de nuestra marca. El apoyo de Maikua hizo posible que nuestro sueño se convirtiera en realidad.</p>
+              </div>
+              <a href="https://www.noubeau.com" target="_blank" rel="noopener noreferrer" class="testimonial-link">
+                  Ver proyecto <i class="fas fa-external-link-alt"></i>
+              </a>
+          </div>
+
+          <!-- Fabrica Sabores Testimonial -->
+          <div class="testimonial-card">
+              <div class="testimonial-header">
+                  <img src="assets/clients/fabrica_sabores_logo.jpg" alt="Noubeau Logo" class="client-logo">
+                  <div class="testimonial-meta">
+                      <h3>La Fabrica de Sabores</h3>
+                      <span class="client-type">Reposteria</span>
+                  </div>
+              </div>
+              <div class="testimonial-content">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p>En La Fábrica de Sabores, gestionar nuestros gastos, pedidos y ganancias con hojas de Excel se estaba volviendo cada vez más ineficiente, especialmente porque no siempre podíamos acceder a la información desde nuestros celulares. Necesitábamos una solución más práctica y ágil. Fue entonces cuando recurrimos a Maikua para desarrollar una aplicación móvil a medida. El resultado superó nuestras expectativas. La aplicación no solo es fácil de usar, sino que también permite a todos nuestros empleados acceder a la información en tiempo real. Esto ha mejorado significativamente nuestra organización y eficiencia. Estamos encantados con el servicio y el profesionalismo de Maikua.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
 
     <section class="blog-section" id="blog">
       <div class="blog-container">
@@ -682,6 +787,6 @@
       </footer>
 
  
-      <script type="module" src="/manis.js"></script>
+      <script type="module" src="/mayn.js"></script>
 </body>
 </html>

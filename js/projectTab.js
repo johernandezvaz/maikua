@@ -72,6 +72,7 @@ const projects = [
     });
   }
   
+  
   function createProjectContent(project) {
     const content = document.createElement('div');
     content.innerHTML = `
@@ -96,3 +97,31 @@ const projects = [
     `;
     return content;
   }
+
+  export function initFeaturedProjects() {
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const projects = document.querySelectorAll('.featured-project');
+
+    function filterProjects(category) {
+        projects.forEach(project => {
+            if (category === 'all' || project.dataset.category === category) {
+                project.style.display = 'block';
+                setTimeout(() => project.style.opacity = '1', 10);
+            } else {
+                project.style.opacity = '0';
+                setTimeout(() => project.style.display = 'none', 300);
+            }
+        });
+    }
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            filterProjects(button.dataset.category);
+        });
+    });
+}
+
+  
+
