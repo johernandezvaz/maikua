@@ -1,6 +1,6 @@
 // Initialize all modules when DOM is loaded
-import { initProjectTabs } from './js/projectTabs.js';
-import { initFeaturedProjects } from './js/projectTabs.js';
+import { initProjectTabs } from './js/projectTab.js';
+import { initFeaturedProjects } from './js/projectTab.js';
 import { initMobileMenu } from './js/mobileMenu.js';
 import { initNavigation, initServiceNavigation } from './js/navi.js';
 import { initTabs } from './js/tabs.js';
