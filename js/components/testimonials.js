@@ -74,21 +74,7 @@ export function initTestimonialsCarousel() {
     // Mostrar el primer testimonio
     showTestimonial(0);
 
-    // Autoplay opcional
-    let autoplayInterval;
-    function startAutoplay() {
-        autoplayInterval = setInterval(nextTestimonial, 5000);
-    }
-
-    function stopAutoplay() {
-        clearInterval(autoplayInterval);
-    }
-
-    testimonialsGrid.addEventListener('mouseenter', stopAutoplay);
-    testimonialsGrid.addEventListener('mouseleave', startAutoplay);
-
-    // Iniciar autoplay
-    startAutoplay();
+   
 
     // Soporte para gestos táctiles
     let touchStartX = 0;
