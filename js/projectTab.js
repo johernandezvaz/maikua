@@ -73,6 +73,7 @@ const projects = [
   }
   
   
+  
   function createProjectContent(project) {
     const content = document.createElement('div');
     content.innerHTML = `
