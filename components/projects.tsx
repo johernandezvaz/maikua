@@ -4,40 +4,119 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/context";
+import { translations } from "@/lib/i18n/translations";
 
-const projects = [
-  {
-    category: "web",
-    title: "Asecalab",
-    description: "Sitio web corporativo para laboratorio de pruebas mecánicas.",
-    image: "/clients/ASE-CA LAB-02.png",
-    tags: ["HTML", "CSS", "JavaScript"],
-    link: "https://www.asecalab.com.mx"
-  },
-  {
-    category: "web",
-    title: "Noubeau",
-    description: "Sitio web corporativo para agencia de publicidad y desarrollo.",
-    image: "/clients/noubeau_logo.png",
-    tags: ["HTML", "CSS", "JavaScript"],
-    link: "https://www.noubeau.com"
-  },
-  {
-    category: "mobile",
-    title: "La Fábrica de Sabores",
-    description: "Aplicación de gestión de pedidos y gastos de una repostería",
-    image: "/clients/fabrica_sabores_logo.jpg",
-    tags: ["Flutter", "Supabase", "Android"],
-    screenshots: [
-      "/images/projects/fs-1.jpeg",
-      "/images/projects/fs-2.jpeg",
-      "/images/projects/fs-3.jpeg"
-    ]
-  }
-];
+const projectsData = {
+  es: [
+    {
+      category: "web",
+      title: "Asecalab",
+      description: "Sitio web corporativo para laboratorio de pruebas mecánicas.",
+      image: "/clients/ASE-CA LAB-02.png",
+      tags: ["HTML", "CSS", "JavaScript"],
+      link: "https://www.asecalab.com.mx"
+    },
+    {
+      category: "web",
+      title: "Noubeau",
+      description: "Sitio web corporativo para agencia de publicidad y desarrollo.",
+      image: "/clients/noubeau_logo.png",
+      tags: ["HTML", "CSS", "JavaScript"],
+      link: "https://www.noubeau.com"
+    },
+    {
+      category: "mobile",
+      title: "La Fábrica de Sabores",
+      description: "Aplicación de gestión de pedidos y gastos de una repostería",
+      image: "/clients/fabrica_sabores_logo.jpg",
+      tags: ["Flutter", "Supabase", "Android"],
+      screenshots: [
+        "/projects/fabrica_sabores_01.jpeg",
+        "/projects/fabrica_sabores_02.jpeg",
+        "/projects/fabrica_sabores_03.jpeg",
+        "/projects/fabrica_sabores_04.jpeg",
+        "/projects/fabrica_sabores_05.jpeg",
+        "/projects/fabrica_sabores_06.jpeg",
+        "/projects/fabrica_sabores_07.jpeg",
+      ]
+    }
+  ],
+  en: [
+    {
+      category: "web",
+      title: "Asecalab",
+      description: "Corporate website for mechanical testing laboratory.",
+      image: "/clients/ASE-CA LAB-02.png",
+      tags: ["HTML", "CSS", "JavaScript"],
+      link: "https://www.asecalab.com.mx"
+    },
+    {
+      category: "web",
+      title: "Noubeau",
+      description: "Corporate website for advertising and development agency.",
+      image: "/clients/noubeau_logo.png",
+      tags: ["HTML", "CSS", "JavaScript"],
+      link: "https://www.noubeau.com"
+    },
+    {
+      category: "mobile",
+      title: "La Fábrica de Sabores",
+      description: "Order and expense management application for a pastry shop",
+      image: "/clients/fabrica_sabores_logo.jpg",
+      tags: ["Flutter", "Supabase", "Android"],
+      screenshots: [
+        "/projects/fabrica_sabores_01.jpeg",
+        "/projects/fabrica_sabores_02.jpeg",
+        "/projects/fabrica_sabores_03.jpeg",
+        "/projects/fabrica_sabores_04.jpeg",
+        "/projects/fabrica_sabores_05.jpeg",
+        "/projects/fabrica_sabores_06.jpeg",
+        "/projects/fabrica_sabores_07.jpeg",
+      ]
+    }
+  ],
+  fr: [
+    {
+      category: "web",
+      title: "Asecalab",
+      description: "Site web d'entreprise pour laboratoire d'essais mécaniques.",
+      image: "/clients/ASE-CA LAB-02.png",
+      tags: ["HTML", "CSS", "JavaScript"],
+      link: "https://www.asecalab.com.mx"
+    },
+    {
+      category: "web",
+      title: "Noubeau",
+      description: "Site web d'entreprise pour agence de publicité et développement.",
+      image: "/clients/noubeau_logo.png",
+      tags: ["HTML", "CSS", "JavaScript"],
+      link: "https://www.noubeau.com"
+    },
+    {
+      category: "mobile",
+      title: "La Fábrica de Sabores",
+      description: "Application de gestion des commandes et des dépenses pour une pâtisserie",
+      image: "/clients/fabrica_sabores_logo.jpg",
+      tags: ["Flutter", "Supabase", "Android"],
+      screenshots: [
+        "/projects/fabrica_sabores_01.jpeg",
+        "/projects/fabrica_sabores_02.jpeg",
+        "/projects/fabrica_sabores_03.jpeg",
+        "/projects/fabrica_sabores_04.jpeg",
+        "/projects/fabrica_sabores_05.jpeg",
+        "/projects/fabrica_sabores_06.jpeg",
+        "/projects/fabrica_sabores_07.jpeg",
+      ]
+    }
+  ]
+};
 
 export function Projects() {
   const [filter, setFilter] = useState("all");
+  const { language } = useLanguage();
+  const t = translations[language].projects;
+  const projects = projectsData[language];
 
   const filteredProjects = filter === "all" 
     ? projects 
@@ -52,21 +131,21 @@ export function Projects() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold mb-4">Proyectos Destacados</h2>
+          <h2 className="text-4xl font-bold mb-4">{t.title}</h2>
         </motion.div>
 
         <div className="flex justify-center space-x-4 mb-12">
-          {["all", "web", "mobile", "desktop"].map((category) => (
+          {Object.entries(t.filters).map(([key, label]) => (
             <button
-              key={category}
-              onClick={() => setFilter(category)}
+              key={key}
+              onClick={() => setFilter(key)}
               className={`px-6 py-2 rounded-full brutal ${
-                filter === category
+                filter === key
                   ? "bg-primary text-white"
                   : "bg-white hover:bg-gray-50"
               }`}
             >
-              {category.charAt(0).toUpperCase() + category.slice(1)}
+              {label}
             </button>
           ))}
         </div>
@@ -116,7 +195,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center text-primary hover:underline"
                     >
-                      Visitar sitio <ExternalLink className="ml-2 h-4 w-4" />
+                      {t.viewProject} <ExternalLink className="ml-2 h-4 w-4" />
                     </a>
                   )}
                 </div>

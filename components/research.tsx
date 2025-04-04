@@ -2,31 +2,20 @@
 
 import { motion } from "framer-motion";
 import { Notebook as Robot, LineChart, Languages, Brain } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/context";
+import { translations } from "@/lib/i18n/translations";
 
-const researchAreas = [
-  {
-    icon: <Robot className="h-12 w-12" />,
-    title: "Aprendizaje Automático",
-    description: "Investigamos y desarrollamos modelos que aprenden de datos para hacer predicciones y tomar decisiones inteligentes."
-  },
-  {
-    icon: <LineChart className="h-12 w-12" />,
-    title: "Análisis Predictivo",
-    description: "Utilizamos datos históricos para predecir tendencias y comportamientos futuros que ayuden en la toma de decisiones."
-  },
-  {
-    icon: <Languages className="h-12 w-12" />,
-    title: "Procesamiento de Lenguaje",
-    description: "Exploramos cómo las máquinas pueden entender y trabajar con el lenguaje humano de forma natural."
-  },
-  {
-    icon: <Brain className="h-12 w-12" />,
-    title: "Redes Neuronales",
-    description: "Investigamos sistemas que imitan el funcionamiento del cerebro para resolver problemas complejos."
-  }
-];
+const researchIcons = {
+  0: Robot,
+  1: LineChart,
+  2: Languages,
+  3: Brain
+};
 
 export function Research() {
+  const { language } = useLanguage();
+  const t = translations[language].research;
+
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -49,11 +38,10 @@ export function Research() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Investigación en IA
+            {t.title}
           </h2>
           <p className="text-xl text-text/80 max-w-3xl mx-auto">
-            En Maikua, nos apasiona la investigación en Inteligencia Artificial. Desarrollamos proyectos innovadores
-            que exploran las posibilidades de la IA para resolver problemas complejos y crear soluciones útiles para la sociedad.
+            {t.description}
           </p>
         </motion.div>
 
@@ -63,40 +51,43 @@ export function Research() {
           viewport={{ once: true, margin: "-100px" }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
-          {researchAreas.map((area, index) => (
-            <motion.div
-              key={index}
-              variants={fadeInUp}
-              custom={index}
-              whileHover={{ y: -5 }}
-              className="glass p-6 rounded-lg hover:shadow-lg transition-all duration-300"
-            >
+          {t.areas.map((area, index) => {
+            const Icon = researchIcons[index as keyof typeof researchIcons];
+            return (
               <motion.div
-                initial={{ scale: 1 }}
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="flex items-center justify-center mb-6 text-primary"
+                key={index}
+                variants={fadeInUp}
+                custom={index}
+                whileHover={{ y: -5 }}
+                className="glass p-6 rounded-lg hover:shadow-lg transition-all duration-300"
               >
-                {area.icon}
+                <motion.div
+                  initial={{ scale: 1 }}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="flex items-center justify-center mb-6 text-primary"
+                >
+                  <Icon className="h-12 w-12" />
+                </motion.div>
+                <motion.h3
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-xl font-semibold mb-4 text-center"
+                >
+                  {area.title}
+                </motion.h3>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                  className="text-text/80 text-center"
+                >
+                  {area.description}
+                </motion.p>
               </motion.div>
-              <motion.h3
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-xl font-semibold mb-4 text-center"
-              >
-                {area.title}
-              </motion.h3>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="text-text/80 text-center"
-              >
-                {area.description}
-              </motion.p>
-            </motion.div>
-          ))}
+            );
+          })}
         </motion.div>
       </div>
     </section>

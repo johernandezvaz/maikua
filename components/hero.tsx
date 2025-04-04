@@ -2,8 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useLanguage } from "@/lib/i18n/context";
+import { translations } from "@/lib/i18n/translations";
 
 export function Hero() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden bg-brown">
       {/* Video Background */}
@@ -27,7 +32,7 @@ export function Hero() {
           className="mb-8"
         >
           <Image
-            src="/images/white-logo.png"
+            src="/white_logo.png"
             alt="Maikua Logo"
             width={120}
             height={120}
@@ -41,7 +46,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-7xl font-bold text-cream mb-6"
         >
-          Maikua
+          {t.hero.title}
         </motion.h1>
 
         <motion.p
@@ -50,7 +55,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-cream mb-8"
         >
-          Creamos soluciones digitales que impulsan tu negocio
+          {t.hero.subtitle}
         </motion.p>
 
         <motion.p
@@ -59,8 +64,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg text-cream/90 max-w-3xl mx-auto"
         >
-          Desarrollamos sitios web, aplicaciones y sistemas inteligentes que transforman tu visión en realidad,
-          combinando diseño moderno con tecnología avanzada.
+          {t.hero.description}
         </motion.p>
 
         <motion.div
@@ -70,7 +74,7 @@ export function Hero() {
           className="mt-12"
         >
           <a href="#contacto" className="btn-brutal">
-            Comienza tu proyecto
+            {t.hero.cta}
           </a>
         </motion.div>
       </div>

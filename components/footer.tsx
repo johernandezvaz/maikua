@@ -1,8 +1,29 @@
+"use client";
+
 import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "@/lib/i18n/context";
+import { translations } from "@/lib/i18n/translations";
 
 export function Footer() {
+  const { language } = useLanguage();
+  const t = translations[language].footer;
+
+  const handleClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 100;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -10,7 +31,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Image
-                src="/images/white-logo.png"
+                src="/white_logo.png"
                 alt="Maikua Logo"
                 width={40}
                 height={40}
@@ -42,26 +63,59 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Navegación</h3>
+            <h3 className="text-lg font-semibold mb-4">{t.navigation.title}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#inicio" className="text-gray-400 hover:text-white transition-colors">
-                  Inicio
+                <button
+                  onClick={() => handleClick("#inicio")}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {t.navigation.items.home}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleClick("#services")}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {t.navigation.items.services}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleClick("#projects")}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {t.navigation.items.projects}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleClick("#contacto")}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {t.navigation.items.contact}
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">{t.legal.title}</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/privacidad" className="text-gray-400 hover:text-white transition-colors">
+                  {t.legal.privacy}
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-gray-400 hover:text-white transition-colors">
-                  Servicios
+                <Link href="/terminos" className="text-gray-400 hover:text-white transition-colors">
+                  {t.legal.terms}
                 </Link>
               </li>
               <li>
-                <Link href="#projects" className="text-gray-400 hover:text-white transition-colors">
-                  Proyectos
-                </Link>
-              </li>
-              <li>
-                <Link href="#blog" className="text-gray-400 hover:text-white transition-colors">
-                  Blog
+                <Link href="/cookies" className="text-gray-400 hover:text-white transition-colors">
+                  {t.legal.cookies}
                 </Link>
               </li>
             </ul>
@@ -88,31 +142,10 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/privacidad" className="text-gray-400 hover:text-white transition-colors">
-                  Política de Privacidad
-                </Link>
-              </li>
-              <li>
-                <Link href="/terminos" className="text-gray-400 hover:text-white transition-colors">
-                  Términos y Condiciones
-                </Link>
-              </li>
-              <li>
-                <Link href="/cookies" className="text-gray-400  hover:text-white transition-colors">
-                  Política de Cookies
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Maikua. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Maikua. {t.copyright}</p>
         </div>
       </div>
     </footer>

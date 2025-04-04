@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maikua - IA & Développement Web</title>
+    <link rel="stylesheet" href="/mayn.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+</head>
+<body>
+    <div class="language-selector">
+        <div class="language-dropdown">
+            <button class="language-btn">
+                <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="flag-icon">
+                <span>FR</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="language-options">
+                <a href="/index.html" class="language-option">
+                    <img src="https://flagcdn.com/w20/es.png" alt="Español" class="flag-icon">
+                    <span>ES</span>
+                </a>
+                <a href="/en/index.html" class="language-option">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="flag-icon">
+                    <span>EN</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="/" class="nav-logo">
+                <img src="/assets/maikua_logo.png" alt="Logo Maikua">
+            </a>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links">
+                <a href="#accueil">Accueil</a>
+                <a href="#about">À Propos</a>
+                <a href="#services">Services</a>
+                <a href="#research">Recherche</a>
+                <a href="#projects">Projets</a>
+                <a href="#blog">Blog</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header" id="accueil">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="/assets/background_videos.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la vidéo HTML5.
+            </video>
+        </div>
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="/assets/white_logo.png" alt="Logo Maikua" class="logo">
+            </div>
+            <div class="hero-definition">
+                <h1 class="hero-title">Maikua</h1>
+                <p class="hero-subtitle">
+                    Créons des solutions numériques qui dynamisent votre entreprise
+                </p>
+                <p class="definition-text">
+                    Nous développons des sites web, des applications et des systèmes intelligents qui transforment votre vision en réalité, alliant design moderne et technologie avancée.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-left">
+                <h2 class="about-title">Découvrez-nous</h2>
+            </div>
+            
+            <div class="tabs-container">
+                <div class="tabs-navigation">
+                    <button class="tab-button" data-tab="about">À Propos</button>
+                    <button class="tab-button" data-tab="vision">Vision</button>
+                    <button class="tab-button" data-tab="mision">Mission</button>
+                    <button class="tab-button" data-tab="valores">Valeurs</button>
+                </div>
+
+                <div id="about" class="tab-content">
+                    <h3>À Propos de Nous</h3>
+                    <p>Chez Maikua, nous fusionnons technologie innovante et engagement profond dans la recherche et le développement de solutions numériques. Nous concevons et développons des sites web avancés, comme des boutiques en ligne, des systèmes de gestion (ORM, ERP) et des plateformes uniques, dans le but d'autonomiser les personnes et les entreprises.</p>
+                    <p>Nous croyons au pouvoir de l'Intelligence Artificielle pour améliorer la société, en proposant des solutions éthiques et bénéfiques qui permettent de construire un avenir plus juste et plus efficace pour tous.</p>
+                </div>
+
+                <div id="vision" class="tab-content">
+                    <h3>Notre Vision</h3>
+                    <p>Devenir une référence mondiale dans le développement de plateformes numériques et d'applications d'Intelligence Artificielle qui contribuent au progrès social et économique, en créant des outils utiles, accessibles et capables de transformer des vies.</p>
+                </div>
+
+                <div id="mision" class="tab-content">
+                    <h3>Notre Mission</h3>
+                    <p>Fournir des solutions numériques innovantes et des services de recherche en Intelligence Artificielle, conçus pour résoudre des problèmes réels et améliorer l'efficacité des entreprises. Du développement de sites web robustes aux systèmes d'IA avancés, notre objectif est d'avoir un impact positif sur les communautés et de favoriser une croissance durable.</p>
+                </div>
+
+                <div id="valores" class="tab-content">
+                    <h3>Nos Valeurs</h3>
+                    <ul class="valores-list">
+                        <li><strong>Innovation :</strong> Nous développons des solutions créatives qui anticipent les besoins futurs.</li>
+                        <li><strong>Engagement Social :</strong> Nous utilisons la technologie comme un outil pour générer un impact positif sur la société.</li>
+                        <li><strong>Transparence :</strong> Nous agissons avec éthique et clarté dans tous nos projets.</li>
+                        <li><strong>Excellence :</strong> Nous nous efforçons d'offrir la plus haute qualité dans chaque solution et service.</li>
+                        <li><strong>Collaboration :</strong> Nous travaillons en équipe avec nos clients pour construire des solutions personnalisées et uniques.</li>
+                        <li><strong>Accessibilité :</strong> Nous concevons des solutions technologiques inclusives, pensées pour tous.</li>
+                        <li><strong>Durabilité :</strong> Nous mettons en œuvre des pratiques responsables qui respectent l'environnement et favorisent le développement durable.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module">
+        import { initTabs } from './js/tabs.js';
+        document.addEventListener('DOMContentLoaded', initTabs);
+    </script>
+
+    <script type="module" src="/many.js"></script>
+</body>
+</html>

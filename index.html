@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maikua -IA & Desarrollo Web</title>
+    <link rel="stylesheet" href="mayn.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Favicon principal -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+    <!-- Iconos para Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+</head>
+<body>
+  <div class="language-selector">
+    <div class="language-dropdown">
+        <button class="language-btn">
+            <img src="https://flagcdn.com/w20/es.png" alt="Español" class="flag-icon">
+            <span>ES</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="language-options">
+            <a href="/en/index.html" class="language-option">
+                <img src="https://flagcdn.com/w20/gb.png" alt="English" class="flag-icon">
+                <span>EN</span>
+            </a>
+            <a href="/fr/index.html" class="language-option">
+                <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="flag-icon">
+                <span>FR</span>
+            </a>
+        </div>
+    </div>
+</div>
+  <nav class="nav">
+    <div class="nav-content">
+        <a href="/" class="nav-logo">
+            <img src="/assets/maikua_logo.png" alt="Maikua Logo">
+        </a>
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#about">Nosotros</a>
+            <a href="#services">Servicios</a>
+            <a href="#research">Investigación</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#blog">Blog</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </div>
+</nav>
+
+  <header class="header" id="inicio">
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="assets/background_videos.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+    </div>
+    <div class="hero-content">
+        <div class="logo-container">
+            <img src="assets/white_logo.png" alt="Maikua Logo" class="logo">
+        </div>
+        <div class="hero-definition">
+            <h1 class="hero-title">Maikua</h1>
+            <p class="hero-subtitle">
+                Creamos soluciones digitales que impulsan tu negocio
+            </p>
+            <p class="definition-text">
+                Desarrollamos sitios web, aplicaciones y sistemas inteligentes que transforman tu visión en realidad, combinando diseño moderno con tecnología avanzada.
+            </p>
+        </div>
+    </div>
+  </header>
+
+  <section class="about-section" id="about">
+    <div class="about-container">
+        <div class="about-left">
+            <h2 class="about-title">Conócenos</h2>
+        </div>
+        
+        <div class="tabs-container">
+            <div class="tabs-navigation">
+                <button class="tab-button" data-tab="about">Nosotros</button>
+                <button class="tab-button" data-tab="vision">Visión</button>
+                <button class="tab-button" data-tab="mision">Misión</button>
+                <button class="tab-button" data-tab="valores">Valores</button>
+            </div>
+
+            <div id="about" class="tab-content">
+              <h3>Acerca de Nosotros</h3>
+              <p>En Maikua, fusionamos tecnología innovadora con un compromiso profundo hacia la investigación y el desarrollo de soluciones digitales. Diseñamos y desarrollamos sitios web avanzados, como tiendas en línea, sistemas de gestión (ORM, ERP) y plataformas únicas, con el objetivo de empoderar a personas y empresas.</p>
+              <p>Creemos en el poder de la Inteligencia Artificial para mejorar la sociedad, impulsando soluciones éticas y beneficiosas que permitan construir un futuro más justo y eficiente para todos.</p>
+          </div>
+
+            <div id="vision" class="tab-content">
+                <h3>Nuestra Visión</h3>
+                <p>Ser un referente global en el desarrollo de plataformas digitales y aplicaciones de Inteligencia Artificial que contribuyan al avance social y económico, creando herramientas que sean útiles, accesibles y capaces de transformar vidas.</p>
+            </div>
+
+            <div id="mision" class="tab-content">
+              <h3>Nuestra Misión</h3>
+              <p>Proveer soluciones digitales innovadoras y servicios de investigación en Inteligencia Artificial, diseñadas para resolver problemas reales y mejorar la eficiencia de las empresas. Desde el desarrollo de sitios web robustos hasta sistemas avanzados de IA, nuestro objetivo es impactar positivamente a las comunidades y fomentar un crecimiento sostenible.</p>
+          </div>
+
+            <div id="valores" class="tab-content">
+                <h3>Nuestros Valores</h3>
+                <ul class="valores-list">
+                    <li><strong>Innovación:</strong> Desarrollamos soluciones creativas que anticipan las necesidades del futuro.</li>
+                    <li><strong>Compromiso Social:</strong> Utilizamos la tecnología como una herramienta para generar un impacto positivo en la sociedad.</li>
+                    <li><strong>Transparencia:</strong> Actuamos con ética y claridad en todos nuestros proyectos.</li>
+                    <li><strong>Excelencia:</strong> Nos esforzamos por ofrecer la máxima calidad en cada solución y servicio.</li>
+                    <li><strong>Colaboración:</strong> Trabajamos en equipo con nuestros clientes para construir soluciones personalizadas y únicas.</li>
+                    <li><strong>Accesibilidad:</strong> Diseñamos soluciones tecnológicas inclusivas, pensadas para todos.</li>
+                    <li><strong>Sostenibilidad:</strong> Implementamos prácticas responsables que respetan el medio ambiente y promueven el desarrollo sostenible.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <script type="module">
+        import { initTabs } from './js/tabs.js';
+        document.addEventListener('DOMContentLoaded', initTabs);
+    </script>
+
+
+
+<!-- Modificación de la sección de servicios -->
+<section class="service-section" id="services">
+  <div class="container">
+    <div class="services-title-container">
+      <h2 class="services-title">Nuestras Soluciones</h2>
+    </div>
+
+    <div class="service-nav">
+      <button class="service-nav-btn active" data-area="web">
+        <i class="fas fa-globe"></i>
+        Desarrollo Web & Móvil
+      </button>
+      <button class="service-nav-btn" data-area="iot">
+        <i class="fas fa-microchip"></i>
+        Internet de las Cosas
+      </button>
+      <button class="service-nav-btn" data-area="ai">
+        <i class="fas fa-brain"></i>
+        Inteligencia Artificial
+      </button>
+    </div>
+
+    <!-- Área de Desarrollo Web & Móvil -->
+    <div class="service-area active" id="web-services">
+      <div class="service-area-header">
+        <i class="fas fa-globe"></i>
+        <h3>Desarrollo Web & Móvil</h3>
+        <p>Soluciones digitales modernas y responsivas para tu presencia en línea</p>
+      </div>
+      <div class="services">
+        <div class="service-card">
+          <i class="fas fa-laptop-code service-icon"></i>
+          <h3>Sitios Web</h3>
+          <p>Diseñamos y desarrollamos sitios web modernos, rápidos y adaptables a cualquier dispositivo.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-mobile-alt service-icon"></i>
+          <h3>Apps Móviles</h3>
+          <p>Desarrollo de aplicaciones nativas y multiplataforma para iOS y Android.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-shopping-cart service-icon"></i>
+          <h3>E-commerce</h3>
+          <p>Creamos tu tienda virtual con todas las herramientas necesarias para vender en internet.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Área de IoT -->
+    <div class="service-area" id="iot-services">
+      <div class="service-area-header">
+        <i class="fas fa-microchip"></i>
+        <h3>Internet de las Cosas</h3>
+        <p>Soluciones IoT inteligentes y conectadas para la automatización y monitoreo</p>
+      </div>
+      <div class="services">
+        <div class="service-card">
+          <i class="fas fa-home service-icon"></i>
+          <h3>Automatización</h3>
+          <p>Sistemas de automatización inteligente para hogares e industrias.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-chart-line service-icon"></i>
+          <h3>Monitoreo</h3>
+          <p>Sistemas de monitoreo en tiempo real para control y análisis.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-network-wired service-icon"></i>
+          <h3>Dispositivos Conectados</h3>
+          <p>Desarrollo de dispositivos IoT personalizados para tus necesidades.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Área de IA -->
+    <div class="service-area" id="ai-services">
+      <div class="service-area-header">
+        <i class="fas fa-brain"></i>
+        <h3>Inteligencia Artificial</h3>
+        <p>Soluciones avanzadas de IA para optimizar y automatizar procesos</p>
+      </div>
+      <div class="services">
+        <div class="service-card">
+          <i class="fas fa-robot service-icon"></i>
+          <h3>Machine Learning</h3>
+          <p>Modelos predictivos y análisis de datos para toma de decisiones.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-language service-icon"></i>
+          <h3>Procesamiento de Lenguaje</h3>
+          <p>Análisis de texto y procesamiento del lenguaje natural.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-eye service-icon"></i>
+          <h3>Visión Computacional</h3>
+          <p>Análisis y procesamiento de imágenes para reconocimiento y clasificación.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+
+    <section class="pricing-section" id="precios">
+      <div class="pricing-container">
+          <div class="pricing-content">
+              <div class="pricing-icon">
+                  <i class="fas fa-file-invoice-dollar"></i>
+              </div>
+              <h2 class="pricing-title">Cotizaciones Personalizadas</h2>
+              <p class="pricing-description">
+                  En Maikua, creemos que cada proyecto es único. Por eso, trabajamos con cotizaciones personalizadas que se ajustan a tus necesidades específicas y presupuesto.
+              </p>
+              <div class="pricing-features">
+                  <div class="pricing-feature">
+                      <i class="fas fa-check feature-icon"></i>
+                      Evaluación detallada de tus necesidades
+                  </div>
+                  <div class="pricing-feature">
+                      <i class="fas fa-check feature-icon"></i>
+                      Presupuesto transparente y sin sorpresas
+                  </div>
+                  <div class="pricing-feature">
+                      <i class="fas fa-check feature-icon"></i>
+                      Opciones flexibles según tu presupuesto
+                  </div>
+                  <div class="pricing-feature">
+                      <i class="fas fa-check feature-icon"></i>
+                      Asesoría gratuita inicial
+                  </div>
+              </div>
+              <a href="#contacto" class="cta-button">
+                  <i class="fas fa-envelope"></i>
+                  Solicitar Cotización
+              </a>
+          </div>
+      </div>
+  </section>
+
+  <section class="research-section" id="research">
+    <div class="research-container">
+        <div class="research-header">
+            <h2 class="research-title">Investigación en IA</h2>
+            <p class="research-description">
+                En Maikua, nos apasiona la investigación en Inteligencia Artificial. Desarrollamos proyectos innovadores que exploran las posibilidades de la IA para resolver problemas complejos y crear soluciones útiles para la sociedad.
+            </p>
+        </div>
+        <div class="research-areas">
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Aprendizaje Automático</h3>
+                <p>Investigamos y desarrollamos modelos que aprenden de datos para hacer predicciones y tomar decisiones inteligentes.</p>
+            </div>
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Análisis Predictivo</h3>
+                <p>Utilizamos datos históricos para predecir tendencias y comportamientos futuros que ayuden en la toma de decisiones.</p>
+            </div>
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-language"></i>
+                </div>
+                <h3>Procesamiento de Lenguaje</h3>
+                <p>Exploramos cómo las máquinas pueden entender y trabajar con el lenguaje humano de forma natural.</p>
+            </div>
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Redes Neuronales</h3>
+                <p>Investigamos sistemas que imitan el funcionamiento del cerebro para resolver problemas complejos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="projects-section" id="projects">
+  <div class="projects-container">
+      <h2 class="projects-title">Proyectos Destacados</h2>
+      <div class="projects-grid">
+          <!-- El contenido será generado dinámicamente por JavaScript -->
+      </div>
+  </div>
+</section>
+<section class="featured-projects" id="featured">
+    <div class="featured-container">
+        <div class="featured-header">
+            <h2 class="featured-title">Proyectos Destacados</h2>
+        </div>
+
+        <div class="project-categories">
+            <button class="category-btn active" data-category="all">Todos</button>
+            <button class="category-btn" data-category="web">Sitios Web</button>
+            <button class="category-btn" data-category="mobile">Apps Móviles</button>
+            <button class="category-btn" data-category="desktop">Apps de Escritorio</button>
+        </div>
+
+        <div class="featured-grid">
+            <!-- Asecalab -->
+            <div class="featured-project" data-category="web">
+                <img src="assets/projects/ASE-CA LAB-02.png" alt="Asecalab Website" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Asecalab</h3>
+                    <p class="project-description">
+                        Sitio web corporativo para laboratorio de pruebas mecanicas.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <a href="https://www.asecalab.com.mx" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Visitar sitio <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Noubeau -->
+            <div class="featured-project" data-category="web">
+                <img src="assets/projects/noubeau_logo.png" alt="Noubeau Website" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Noubeau</h3>
+                    <p class="project-description">
+                        Sitio web corporativo para agencia de publlicidad y desarrollo.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <a href="https://www.noubeau.com" target="_blank" rel="noopener noreferrer" class="project-link">
+                        Visitar sitio <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- App Móvil -->
+            <div class="featured-project" data-category="mobile">
+                <div class="mobile-screenshots">
+                    <img src="assets/projects/fabrica_sabores_01.jpeg" alt="App Screenshot 1" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_02.jpeg" alt="App Screenshot 2" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_03.jpeg" alt="App Screenshot 3" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_04.jpeg" alt="App Screenshot 4" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_05.jpeg" alt="App Screenshot 5" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_06.jpeg" alt="App Screenshot 6" class="mobile-screenshot">
+                    <img src="assets/projects/fabrica_sabores_07.jpeg" alt="App Screenshot 7" class="mobile-screenshot">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">La Fabrica de Sabores</h3>
+                    <p class="project-description">
+                        Aplicación de gestión de pedidos y gastos de una reposteria
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">Supabase</span>
+                        <span class="project-tag">Android</span>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-project" data-category="mobile">
+                <div class="mobile-screenshots">
+                    <img src="assets/projects/perfiles_flutter_01.jpeg" alt="App Screenshot 1" class="mobile-screenshot">
+                    <img src="assets/projects/perfiles_flutter_02.jpeg" alt="App Screenshot 2" class="mobile-screenshot">
+                    <img src="assets/projects/perfiles_flutter_03.jpeg" alt="App Screenshot 3" class="mobile-screenshot">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Cygnus</h3>
+                    <p class="project-description">
+                      Aplicación de calculo de uso de perfiles, residuo y desperdicio total para versión móvil
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Flutter</span>
+                        <span class="project-tag">Supabase</span>
+                        <span class="project-tag">Android</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App de Escritorio -->
+            <div class="featured-project" data-category="desktop">
+                <div class="desktop-screenshots">
+                    <img src="assets/projects/perfiles_python_01.png" alt="Desktop App Screenshot 1" class="desktop-screenshot">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Cygnus</h3>
+                    <p class="project-description">
+                        Aplicación de calculo de uso de perfiles, residuo y desperdicio total para versión de escritorio
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">PySide6</span>
+                        <span class="project-tag">Windows</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials-section" id="testimonials">
+  <div class="testimonials-container">
+      <h2 class="testimonials-title">Lo que dicen nuestros clientes</h2>
+      
+      <div class="testimonials-grid">
+          <!-- Ase-Ca-Lab Testimonial -->
+          <div class="testimonial-card">
+              <div class="testimonial-header">
+                  <img src="assets/clients/ASE-CA LAB-02.png" alt="Ase-Ca-Lab Logo" class="client-logo">
+                  <div class="testimonial-meta">
+                      <h3>Ase-Ca-Lab</h3>
+                      <span class="client-type">Laboratorio de Pruebas Mecánicas</span>
+                  </div>
+              </div>
+              <div class="testimonial-content">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p>Cuando comenzamos con Maikua, nuestro laboratorio de pruebas mecánicas, Ase-Ca-Lab, apenas estaba arrancando. Necesitábamos un sitio web que no solo reflejara nuestra profesionalidad, sino que también ayudara a atraer clientes. Maikua entendió nuestras necesidades desde el principio y nos ofreció una solución a medida. Gracias a su excepcional trabajo, nuestro sitio web ha sido una puerta de entrada para nuevos clientes, permitiéndonos crecer más rápido de lo que esperábamos. Hoy en día, muchos de nuestros clientes nos encuentran y nos contactan directamente a través de la web que Maikua creó. No podríamos estar más agradecidos.</p>
+              </div>
+              <a href="https://www.asecalab.com.mx" target="_blank" rel="noopener noreferrer" class="testimonial-link">
+                  Ver proyecto <i class="fas fa-external-link-alt"></i>
+              </a>
+          </div>
+
+          <!-- Noubeau Testimonial -->
+          <div class="testimonial-card">
+              <div class="testimonial-header">
+                  <img src="assets/clients/noubeau_logo.png" alt="Noubeau Logo" class="client-logo">
+                  <div class="testimonial-meta">
+                      <h3>Noubeau</h3>
+                      <span class="client-type">Agencia de Marketing y Desarrollo</span>
+                  </div>
+              </div>
+              <div class="testimonial-content">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p>Como empresa emergente, Noubeau enfrentaba el desafío de no contar con el equipo ni la infraestructura necesarios para desarrollar nuestro sitio web. Buscábamos una solución que nos permitiera iniciar sin complicaciones y dentro de nuestro presupuesto. Maikua fue la respuesta perfecta. Nos ofrecieron cotizaciones personalizadas y un diseño que se ajustaba a nuestras necesidades específicas. Gracias a ellos, nuestro sitio web no solo es funcional, sino que también transmite la esencia de nuestra marca. El apoyo de Maikua hizo posible que nuestro sueño se convirtiera en realidad.</p>
+              </div>
+              <a href="https://www.noubeau.com" target="_blank" rel="noopener noreferrer" class="testimonial-link">
+                  Ver proyecto <i class="fas fa-external-link-alt"></i>
+              </a>
+          </div>
+
+          <!-- Fabrica Sabores Testimonial -->
+          <div class="testimonial-card">
+              <div class="testimonial-header">
+                  <img src="assets/clients/fabrica_sabores_logo.jpg" alt="Noubeau Logo" class="client-logo">
+                  <div class="testimonial-meta">
+                      <h3>La Fabrica de Sabores</h3>
+                      <span class="client-type">Reposteria</span>
+                  </div>
+              </div>
+              <div class="testimonial-content">
+                  <i class="fas fa-quote-left quote-icon"></i>
+                  <p>En La Fábrica de Sabores, gestionar nuestros gastos, pedidos y ganancias con hojas de Excel se estaba volviendo cada vez más ineficiente, especialmente porque no siempre podíamos acceder a la información desde nuestros celulares. Necesitábamos una solución más práctica y ágil. Fue entonces cuando recurrimos a Maikua para desarrollar una aplicación móvil a medida. El resultado superó nuestras expectativas. La aplicación no solo es fácil de usar, sino que también permite a todos nuestros empleados acceder a la información en tiempo real. Esto ha mejorado significativamente nuestra organización y eficiencia. Estamos encantados con el servicio y el profesionalismo de Maikua.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+    <section class="blog-section" id="blog">
+      <div class="blog-container">
+          <h2 class="blog-title">Nuestro Blog</h2>
+          <p class="blog-subtitle">Compartiendo conocimiento sobre tecnología e innovación</p>
+          
+          <div class="blog-categories-nav">
+              <button class="category-btn active" data-category="all">Todos</button>
+              <button class="category-btn" data-category="ia">Inteligencia Artificial</button>
+              <button class="category-btn" data-category="desarrollo web">Desarrollo Web</button>
+              <button class="category-btn" data-category="iot">IoT</button>
+          </div>
+  
+          <!-- Actualización de la sección del blog -->
+<div class="blog-grid">
+  <!-- Featured Post - IoT -->
+   <!-- Featured Post - Backend -->
+   <article class="blog-card featured">
+    <div class="card-content">
+        <div class="card-meta">
+            <span class="category">IA</span>
+            <span class="date">Febrero 2024</span>
+        </div>
+        <h3>MONAI: El Futuro del Desarrollo en Inteligencia Artificial Médica</h3>
+        <p>Un poderoso framework de código abierto diseñado específicamente para impulsar la inteligencia artificial en el ámbito médico.</p>
+        <div class="card-tags">
+            <span>#IA</span>
+            <span>#PyTorch</span>
+            <span>#Python</span>
+            <span>#Monai</span>
+        </div>
+        <a href="/pages/blog/monai-ai-medica.html" class="read-more">
+            <i class="fas fa-arrow-right"></i> Leer más
+        </a>
+    </div>
+</article>
+
+   <article class="blog-card">
+    <div class="card-content">
+        <div class="card-meta">
+            <span class="category">Desarrollo Web</span>
+            <span class="date">Febrero 2024</span>
+        </div>
+        <h3>¿Go, Python o Rust para el Backend? Descubre cuál es el mejor para tu proyecto</h3>
+        <p>Una comparación detallada de los tres lenguajes más populares para desarrollo backend, ayudándote a elegir el mejor para tus necesidades.</p>
+        <div class="card-tags">
+            <span>#Backend</span>
+            <span>#Go</span>
+            <span>#Python</span>
+            <span>#Rust</span>
+        </div>
+        <a href="/pages/blog/backend-comparison.html" class="read-more">
+            <i class="fas fa-arrow-right"></i> Leer más
+        </a>
+    </div>
+</article>
+
+   <!-- Previous Featured Post - Now Secondary -->
+   <article class="blog-card">
+    <div class="card-content">
+        <div class="card-meta">
+            <span class="category">IoT</span>
+            <span class="date">Febrero 2024</span>
+        </div>
+        <h3>¿Pueden las Raspberry Pi reemplazar a los PLC en la industria?</h3>
+        <p>Un análisis detallado de las ventajas y limitaciones de usar Raspberry Pi como alternativa a los PLC.</p>
+        <a href="/pages/blog/raspberry-pi-vs-plc.html" class="read-more">
+            <i class="fas fa-arrow-right"></i> Leer más
+        </a>
+    </div>
+</article>
+
+
+  
+          <div class="blog-footer">
+            <p class="coming-soon-text">¡Suscríbete para recibir notificaciones cuando publiquemos nuevo contenido!</p>
+            <button id="subscribeBtn" class="subscribe-btn">
+                <i class="fas fa-envelope"></i> Suscribirse
+            </button>
+        </div>
+
+          <div id="subscriptionModal" class="modal">
+            <div class="modal-content">
+                <h3>Suscríbete a nuestro blog</h3>
+                <p>Recibe actualizaciones sobre nuestras últimas publicaciones.</p>
+                <form id="subscriptionForm">
+                    <input 
+                        type="email" 
+                        name="subscriber_email" 
+                        placeholder="Tu correo electrónico" 
+                        required
+                    >
+                    <button type="submit" class="submit-btn">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+
+      </div>
+  </section>
+
+
+
+    <section class="contact-section" id="contacto">
+        <div class="contact-container">
+          <div class="contact-header">
+            <h2 class="contact-title">Contáctanos</h2>
+            <p class="contact-subtitle">Estamos aquí para ayudarte. Contáctanos para discutir tus proyectos o resolver tus dudas.</p>
+          </div>
+          
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Correo Electrónico</h3>
+                  <p>contacto@maikua.com.mx</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Teléfono</h3>
+                  <p>+52 614 397 77 41</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Ubicación</h3>
+                  <p>Chihuahua, Chihuahua</p>
+                </div>
+              </div>
+              
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Horario de Atención</h3>
+                  <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                </div>
+              </div>
+            </div>
+            
+            <form class="contact-form">
+              <div class="form-group">
+                <label class="form-label" for="name">Nombre</label>
+                <input type="text" id="name" name="name" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" class="form-input" required>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="subject">Asunto</label>
+                <select id="subject" name="subject" class="form-select" required>
+                  <option value="">Selecciona un asunto</option>
+                  <option value="cotizacion">Solicitud de Cotización</option>
+                  <option value="soporte">Soporte Técnico</option>
+                  <option value="proyecto">Consulta sobre Proyecto</option>
+                  <option value="colaboracion">Propuesta de Colaboración</option>
+                  <option value="empleo">Oportunidades de Empleo</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="message">Mensaje</label>
+                <textarea id="message" name="message" class="form-textarea" required></textarea>
+              </div>
+              
+              <button type="submit" class="submit-button">Enviar Mensaje</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <div class="footer-logo">
+                <img src="assets/white_logo.png" alt="Logo">
+                <span class="footer-logo-text">Maikua</span>
+              </div>
+              <p class="footer-description">
+                Fusionamos tecnología innovadora con un compromiso profundo hacia la investigación y el desarrollo de soluciones digitales.
+              </p>
+              <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=61570268176249"  target="_blank"   class="social-link" aria-label="Facebook">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/maikua.iot/?hl=es-la"  target="_blank" class="social-link" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <!-- <a href="#" class="social-link" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a> -->
+              </div>
+            </div>
+      
+            <nav class="footer-nav">
+              <h3>Navegación</h3>
+              <ul class="footer-links">
+                  <li><a href="#inicio"><i class="fas fa-chevron-right"></i>Inicio</a></li>
+                  <li><a href="#services"><i class="fas fa-chevron-right"></i>Servicios</a></li>
+                  <li><a href="#projects"><i class="fas fa-chevron-right"></i>Proyectos</a></li>
+                  <li><a href="#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
+                  <li><a href="#contacto"><i class="fas fa-chevron-right"></i>Contacto</a></li>
+              </ul>
+          </nav>
+      
+            <nav class="footer-nav">
+              <h3>Contacto</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="mailto:contacto@maikua.com.mx">
+                    <i class="fas fa-envelope"></i>contacto@maikua.com.mx
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+521234567890">
+                    <i class="fas fa-phone"></i>+52 614 397 77 41
+                  </a>
+                </li>
+                <li>
+                  <a href="#ubicacion">
+                    <i class="fas fa-map-marker-alt"></i>Chihuahua, Chihuahua
+                  </a>
+                </li>
+              </ul>
+            </nav>
+      
+            <nav class="footer-nav">
+              <h3>Legal</h3>
+              <ul class="footer-links">
+                  <li><a href="/pages/privacidad.html"><i class="fas fa-shield-alt"></i>Política de Privacidad</a></li>
+                  <li><a href="/pages/terminos.html"><i class="fas fa-gavel"></i>Términos y Condiciones</a></li>
+                  <li><a href="/pages/cookies.html"><i class="fas fa-cookie"></i>Política de Cookies</a></li>
+              </ul>
+          </nav>
+          </div>
+
+         
+
+      
+          <div class="footer-bottom">
+            <p>&copy; <span class="current-year">2024</span> Maikua Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+
+ 
+      <script type="module" src="/many.js"></script>
+</body>
+</html>
