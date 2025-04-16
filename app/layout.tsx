@@ -1,9 +1,16 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import type { Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { LanguageProvider } from '@/lib/i18n/context';
 
 const inter = Inter({ subsets: ['latin'] });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#2A9D8F',
+};
 
 export const metadata: Metadata = {
   title: 'Maikua - Soluciones Digitales e Investigación en IA',
@@ -52,8 +59,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/favicon/site.webmanifest',
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#2A9D8F',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',

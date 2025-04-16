@@ -67,7 +67,7 @@ export const translations = {
       title: "Nuestras Soluciones",
       categories: {
         web: {
-          title: "Desarrollo Web & Móvil",
+          title: "Desarrollo Web",
           description: "Soluciones digitales modernas y responsivas para tu presencia en línea",
           items: [
             {
@@ -75,30 +75,30 @@ export const translations = {
               description: "Diseñamos y desarrollamos sitios web modernos, rápidos y adaptables a cualquier dispositivo."
             },
             {
-              title: "Apps Móviles",
-              description: "Desarrollo de aplicaciones nativas y multiplataforma para iOS y Android."
-            },
-            {
               title: "E-commerce",
               description: "Creamos tu tienda virtual con todas las herramientas necesarias para vender en internet."
+            },
+            {
+              title: "Sistemas Web",
+              description: "Desarrollamos sistemas y aplicaciones web personalizadas para tu negocio."
             }
           ]
         },
-        iot: {
-          title: "Internet de las Cosas",
-          description: "Soluciones IoT inteligentes y conectadas para la automatización y monitoreo",
+        mobile: {
+          title: "Desarrollo Móvil",
+          description: "Aplicaciones nativas y multiplataforma para iOS y Android",
           items: [
             {
-              title: "Automatización",
-              description: "Sistemas de automatización inteligente para hogares e industrias."
+              title: "Apps Nativas",
+              description: "Desarrollo de aplicaciones nativas para iOS y Android con rendimiento óptimo."
             },
             {
-              title: "Monitoreo",
-              description: "Sistemas de monitoreo en tiempo real para control y análisis."
+              title: "Apps Multiplataforma",
+              description: "Soluciones eficientes que funcionan en múltiples dispositivos y sistemas."
             },
             {
-              title: "Dispositivos Conectados",
-              description: "Desarrollo de dispositivos IoT personalizados para tus necesidades."
+              title: "Apps Empresariales",
+              description: "Aplicaciones robustas y seguras para necesidades empresariales específicas."
             }
           ]
         },
@@ -209,6 +209,166 @@ export const translations = {
         cookies: "Política de Cookies"
       },
       copyright: "Todos los derechos reservados."
+    },
+    pricing: {
+      title: "Nuestros Precios",
+      subtitle: "Soluciones transparentes y accesibles para tu negocio",
+      categories: {
+        web: {
+          title: "Desarrollo Web",
+          plans: [
+            {
+              name: "Landing Page",
+              price: "10,200",
+              usd: "$520",
+              eur: "€467",
+              duration: "2 semanas de desarrollo",
+              features: [
+                "Diseño personalizado",
+                "Responsive design",
+                "Optimización SEO",
+                "Formulario de contacto",
+                "Integración de redes sociales",
+                "Analytics"
+              ]
+            },
+            {
+              name: "Página Web",
+              price: "34,000",
+              usd: "$1,731",
+              eur: "€1,554",
+              duration: "3-4 semanas de desarrollo",
+              features: [
+                "Todo lo de Landing Page",
+                "Múltiples páginas",
+                "Panel de administración",
+                "Blog integrado",
+                "Newsletter",
+                "Soporte técnico"
+              ]
+            },
+            {
+              name: "Ecommerce",
+              price: "40,000",
+              usd: "$2,037",
+              eur: "€1,829",
+              duration: "3-4 semanas de desarrollo",
+              features: [
+                "Todo lo de Página Web",
+                "Catálogo de productos",
+                "Carrito de compras",
+                "Pasarela de pagos",
+                "Gestión de inventario",
+                "Reportes de ventas"
+              ]
+            }
+          ]
+        },
+        mobile: {
+          title: "Desarrollo Móvil",
+          plans: [
+            {
+              name: "App Básica",
+              price: "40,000 - 60,000",
+              usd: "$2,037 - $3,056",
+              eur: "€1,829 - €2,743",
+              duration: "2-3 semanas de desarrollo",
+              features: [
+                "Diseño intuitivo",
+                "Funcionalidades básicas",
+                "Autenticación de usuarios",
+                "Almacenamiento local",
+                "Notificaciones push",
+                "Soporte técnico"
+              ]
+            },
+            {
+              name: "App Intermedia",
+              price: "80,000 - 100,000",
+              usd: "$4,074 - $5,094",
+              eur: "€3,658 - €4,572",
+              duration: "4-6 semanas de desarrollo",
+              features: [
+                "Todo lo de App Básica",
+                "Integración API",
+                "Mapas y geolocalización",
+                "Análisis de datos",
+                "Modo offline",
+                "Panel de administración"
+              ]
+            },
+            {
+              name: "App Compleja",
+              price: "120,000 - 150,000",
+              usd: "$6,113 - $7,638",
+              eur: "€5,486 - €6,858",
+              duration: "6-8 semanas de desarrollo",
+              features: [
+                "Todo lo de App Intermedia",
+                "Funciones avanzadas",
+                "Integración IoT",
+                "Análisis en tiempo real",
+                "Escalabilidad empresarial",
+                "Soporte prioritario"
+              ]
+            }
+          ]
+        },
+        ai: {
+          title: "Desarrollo de IA",
+          plans: [
+            {
+              name: "IA Básica",
+              price: "50,000 - 70,000",
+              usd: "$2,547 - $3,566",
+              eur: "€2,286 - €3,200",
+              duration: "2-3 semanas de desarrollo",
+              features: [
+                "Análisis de datos básico",
+                "Modelos predictivos simples",
+                "Automatización básica",
+                "Integración API",
+                "Reportes básicos",
+                "Soporte técnico"
+              ]
+            },
+            {
+              name: "IA Intermedia",
+              price: "100,000 - 150,000",
+              usd: "$5,094 - $7,638",
+              eur: "€4,572 - €6,858",
+              duration: "4-6 semanas de desarrollo",
+              features: [
+                "Análisis avanzado",
+                "Machine Learning",
+                "Procesamiento de lenguaje",
+                "Visión computacional",
+                "Dashboard personalizado",
+                "Soporte prioritario"
+              ]
+            },
+            {
+              name: "IA Avanzada",
+              price: "200,000 - 300,000",
+              usd: "$10,188 - $15,282",
+              eur: "€9,144 - €13,716",
+              duration: "8-12 semanas de desarrollo",
+              features: [
+                "Deep Learning",
+                "Redes neuronales complejas",
+                "Procesamiento en tiempo real",
+                "Integración IoT",
+                "Escalabilidad empresarial",
+                "Consultoría especializada"
+              ]
+            }
+          ]
+        }
+      },
+      customNote: "¿Necesitas una solución personalizada? ¡Contáctanos!",
+      contactTitle: "¿Los precios están fuera de tu presupuesto?",
+      contactDescription: "Entendemos que cada proyecto es único. Contáctanos para discutir tu presupuesto y encontrar una solución que se ajuste a tus necesidades.",
+      contactButton: "Hablar sobre mi proyecto"
     }
   },
   en: {
@@ -277,7 +437,7 @@ export const translations = {
       title: "Our Solutions",
       categories: {
         web: {
-          title: "Web & Mobile Development",
+          title: "Web Development",
           description: "Modern and responsive digital solutions for your online presence",
           items: [
             {
@@ -285,30 +445,30 @@ export const translations = {
               description: "We design and develop modern, fast, and responsive websites for any device."
             },
             {
-              title: "Mobile Apps",
-              description: "Native and cross-platform application development for iOS and Android."
-            },
-            {
               title: "E-commerce",
               description: "We create your virtual store with all the necessary tools to sell online."
+            },
+            {
+              title: "Web Systems",
+              description: "We develop custom web systems and applications for your business."
             }
           ]
         },
-        iot: {
-          title: "Internet of Things",
-          description: "Smart and connected IoT solutions for automation and monitoring",
+        mobile: {
+          title: "Mobile Development",
+          description: "Native and cross-platform applications for iOS and Android",
           items: [
             {
-              title: "Automation",
-              description: "Smart automation systems for homes and industries."
+              title: "Native Apps",
+              description: "Development of native applications for iOS and Android with optimal performance."
             },
             {
-              title: "Monitoring",
-              description: "Real-time monitoring systems for control and analysis."
+              title: "Cross-platform Apps",
+              description: "Efficient solutions that work across multiple devices and systems."
             },
             {
-              title: "Connected Devices",
-              description: "Development of customized IoT devices for your needs."
+              title: "Enterprise Apps",
+              description: "Robust and secure applications for specific business needs."
             }
           ]
         },
@@ -419,6 +579,166 @@ export const translations = {
         cookies: "Cookie Policy"
       },
       copyright: "All rights reserved."
+    },
+    pricing: {
+      title: "Our Pricing",
+      subtitle: "Transparent and accessible solutions for your business",
+      categories: {
+        web: {
+          title: "Web Development",
+          plans: [
+            {
+              name: "Landing Page",
+              price: "10,200",
+              usd: "$520",
+              eur: "€467",
+              duration: "2 weeks development",
+              features: [
+                "Custom design",
+                "Responsive design",
+                "SEO optimization",
+                "Contact form",
+                "Social media integration",
+                "Analytics"
+              ]
+            },
+            {
+              name: "Website",
+              price: "34,000",
+              usd: "$1,731",
+              eur: "€1,554",
+              duration: "3-4 weeks development",
+              features: [
+                "All Landing Page features",
+                "Multiple pages",
+                "Admin panel",
+                "Integrated blog",
+                "Newsletter",
+                "Technical support"
+              ]
+            },
+            {
+              name: "Ecommerce",
+              price: "40,000",
+              usd: "$2,037",
+              eur: "€1,829",
+              duration: "3-4 weeks development",
+              features: [
+                "All Website features",
+                "Product catalog",
+                "Shopping cart",
+                "Payment gateway",
+                "Inventory management",
+                "Sales reports"
+              ]
+            }
+          ]
+        },
+        mobile: {
+          title: "Mobile Development",
+          plans: [
+            {
+              name: "Basic App",
+              price: "40,000 - 60,000",
+              usd: "$2,037 - $3,056",
+              eur: "€1,829 - €2,743",
+              duration: "2-3 weeks development",
+              features: [
+                "Intuitive design",
+                "Basic features",
+                "User authentication",
+                "Local storage",
+                "Push notifications",
+                "Technical support"
+              ]
+            },
+            {
+              name: "Intermediate App",
+              price: "80,000 - 100,000",
+              usd: "$4,074 - $5,094",
+              eur: "€3,658 - €4,572",
+              duration: "4-6 weeks development",
+              features: [
+                "All Basic App features",
+                "API integration",
+                "Maps and geolocation",
+                "Data analytics",
+                "Offline mode",
+                "Admin panel"
+              ]
+            },
+            {
+              name: "Complex App",
+              price: "120,000 - 150,000",
+              usd: "$6,113 - $7,638",
+              eur: "€5,486 - €6,858",
+              duration: "6-8 weeks development",
+              features: [
+                "All Intermediate App features",
+                "Advanced features",
+                "IoT integration",
+                "Real-time analytics",
+                "Enterprise scalability",
+                "Priority support"
+              ]
+            }
+          ]
+        },
+        ai: {
+          title: "AI Development",
+          plans: [
+            {
+              name: "Basic AI",
+              price: "50,000 - 70,000",
+              usd: "$2,547 - $3,566",
+              eur: "€2,286 - €3,200",
+              duration: "2-3 weeks development",
+              features: [
+                "Basic data analysis",
+                "Simple predictive models",
+                "Basic automation",
+                "API integration",
+                "Basic reporting",
+                "Technical support"
+              ]
+            },
+            {
+              name: "Intermediate AI",
+              price: "100,000 - 150,000",
+              usd: "$5,094 - $7,638",
+              eur: "€4,572 - €6,858",
+              duration: "4-6 weeks development",
+              features: [
+                "Advanced analytics",
+                "Machine Learning",
+                "Language processing",
+                "Computer vision",
+                "Custom dashboard",
+                "Priority support"
+              ]
+            },
+            {
+              name: "Advanced AI",
+              price: "200,000 - 300,000",
+              usd: "$10,188 - $15,282",
+              eur: "€9,144 - €13,716",
+              duration: "8-12 weeks development",
+              features: [
+                "Deep Learning",
+                "Complex neural networks",
+                "Real-time processing",
+                "IoT integration",
+                "Enterprise scalability",
+                "Specialized consulting"
+              ]
+            }
+          ]
+        }
+      },
+      customNote: "Need a custom solution? Contact us!",
+      contactTitle: "Prices above your budget?",
+      contactDescription: "We understand that each project is unique. Contact us to discuss your budget and find a solution that fits your needs.",
+      contactButton: "Discuss my project"
     }
   },
   fr: {
@@ -487,7 +807,7 @@ export const translations = {
       title: "Nos Solutions",
       categories: {
         web: {
-          title: "Développement Web & Mobile",
+          title: "Développement Web",
           description: "Solutions numériques modernes et responsives pour votre présence en ligne",
           items: [
             {
@@ -495,30 +815,30 @@ export const translations = {
               description: "Nous concevons et développons des sites web modernes, rapides et adaptables à tous les appareils."
             },
             {
-              title: "Applications Mobiles",
-              description: "Développement d'applications natives et multiplateformes pour iOS et Android."
-            },
-            {
               title: "E-commerce",
               description: "Nous créons votre boutique virtuelle avec tous les outils nécessaires pour vendre en ligne."
+            },
+            {
+              title: "Systèmes Web",
+              description: "Nous développons des systèmes et applications web personnalisés pour votre entreprise."
             }
           ]
         },
-        iot: {
-          title: "Internet des Objets",
-          description: "Solutions IoT intelligentes et connectées pour l'automatisation et la surveillance",
+        mobile: {
+          title: "Développement Mobile",
+          description: "Applications natives et multiplateformes pour iOS et Android",
           items: [
             {
-              title: "Automatisation",
-              description: "Systèmes d'automatisation intelligente pour les maisons et les industries."
+              title: "Apps Natives",
+              description: "Développement d'applications natives pour iOS et Android avec performance optimale."
             },
             {
-              title: "Surveillance",
-              description: "Systèmes de surveillance en temps réel pour le contrôle et l'analyse."
+              title: "Apps Multiplateformes",
+              description: "Solutions efficaces qui fonctionnent sur plusieurs appareils et systèmes."
             },
             {
-              title: "Appareils Connectés",
-              description: "Développement d'appareils IoT personnalisés pour vos besoins."
+              title: "Apps Entreprise",
+              description: "Applications robustes et sécurisées pour les besoins spécifiques des entreprises."
             }
           ]
         },
@@ -629,6 +949,166 @@ export const translations = {
         cookies: "Politique de Cookies"
       },
       copyright: "Tous droits réservés."
+    },
+    pricing: {
+      title: "Nos Tarifs",
+      subtitle: "Des solutions transparentes et accessibles pour votre entreprise",
+      categories: {
+        web: {
+          title: "Développement Web",
+          plans: [
+            {
+              name: "Landing Page",
+              price: "10,200",
+              usd: "$520",
+              eur: "€467",
+              duration: "2 semaines de développement",
+              features: [
+                "Design personnalisé",
+                "Design responsive",
+                "Optimisation SEO",
+                "Formulaire de contact",
+                "Intégration réseaux sociaux",
+                "Analytics"
+              ]
+            },
+            {
+              name: "Site Web",
+              price: "34,000",
+              usd: "$1,731",
+              eur: "€1,554",
+              duration: "3-4 semaines de développement",
+              features: [
+                "Toutes les fonctionnalités Landing Page",
+                "Pages multiples",
+                "Panneau d'administration",
+                "Blog intégré",
+                "Newsletter",
+                "Support technique"
+              ]
+            },
+            {
+              name: "E-commerce",
+              price: "40,000",
+              usd: "$2,037",
+              eur: "€1,829",
+              duration: "3-4 semaines de développement",
+              features: [
+                "Toutes les fonctionnalités Site Web",
+                "Catalogue produits",
+                "Panier d'achat",
+                "Passerelle de paiement",
+                "Gestion des stocks",
+                "Rapports de ventes"
+              ]
+            }
+          ]
+        },
+        mobile: {
+          title: "Développement Mobile",
+          plans: [
+            {
+              name: "App Basique",
+              price: "40,000 - 60,000",
+              usd: "$2,037 - $3,056",
+              eur: "€1,829 - €2,743",
+              duration: "2-3 semaines de développement",
+              features: [
+                "Design intuitif",
+                "Fonctionnalités basiques",
+                "Authentification utilisateur",
+                "Stockage local",
+                "Notifications push",
+                "Support technique"
+              ]
+            },
+            {
+              name: "App Intermédiaire",
+              price: "80,000 - 100,000",
+              usd: "$4,074 - $5,094",
+              eur: "€3,658 - €4,572",
+              duration: "4-6 semaines de développement",
+              features: [
+                "Toutes les fonctionnalités App Basique",
+                "Intégration API",
+                "Cartes et géolocalisation",
+                "Analyse de données",
+                "Mode hors ligne",
+                "Panneau d'administration"
+              ]
+            },
+            {
+              name: "App Complexe",
+              price: "120,000 - 150,000",
+              usd: "$6,113 - $7,638",
+              eur: "€5,486 - €6,858",
+              duration: "6-8 semaines de développement",
+              features: [
+                "Toutes les fonctionnalités App Intermédiaire",
+                "Fonctionnalités avancées",
+                "Intégration IoT",
+                "Analyse en temps réel",
+                "Évolutivité entreprise",
+                "Support prioritaire"
+              ]
+            }
+          ]
+        },
+        ai: {
+          title: "Développement IA",
+          plans: [
+            {
+              name: "IA Basique",
+              price: "50,000 - 70,000",
+              usd: "$2,547 - $3,566",
+              eur: "€2,286 - €3,200",
+              duration: "2-3 semaines de développement",
+              features: [
+                "Analyse de données basique",
+                "Modèles prédictifs simples",
+                "Automatisation basique",
+                "Intégration API",
+                "Rapports basiques",
+                "Support technique"
+              ]
+            },
+            {
+              name: "IA Intermédiaire",
+              price: "100,000 - 150,000",
+              usd: "$5,094 - $7,638",
+              eur: "€4,572 - €6,858",
+              duration: "4-6 semaines de développement",
+              features: [
+                "Analyse avancée",
+                "Machine Learning",
+                "Traitement du langage",
+                "Vision par ordinateur",
+                "Tableau de bord personnalisé",
+                "Support prioritaire"
+              ]
+            },
+            {
+              name: "IA Avancée",
+              price: "200,000 - 300,000",
+              usd: "$10,188 - $15,282",
+              eur: "€9,144 - €13,716",
+              duration: "8-12 semaines de développement",
+              features: [
+                "Deep Learning",
+                "Réseaux neuronaux complexes",
+                "Traitement en temps réel",
+                "Intégration IoT",
+                "Évolutivité entreprise",
+                "Conseil spécialisé"
+              ]
+            }
+          ]
+        }
+      },
+      customNote: "Besoin d'une solution personnalisée ? Contactez-nous !",
+      contactTitle: "Les prix dépassent votre budget ?",
+      contactDescription: "Nous comprenons que chaque projet est unique. Contactez-nous pour discuter de votre budget et trouver une solution adaptée à vos besoins.",
+      contactButton: "Discuter de mon projet"
     }
   }
 } as const;

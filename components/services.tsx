@@ -2,17 +2,19 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Globe, Cpu, Brain, DivideIcon as LucideIcon } from "lucide-react";
+import { Globe, Brain, Smartphone } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/context";
 import { translations } from "@/lib/i18n/translations";
 
 type ServiceIconsType = {
-  [key: string]: typeof LucideIcon;
+  web: typeof Globe;
+  mobile: typeof Smartphone;
+  ai: typeof Brain;
 };
 
 const serviceIcons: ServiceIconsType = {
   web: Globe,
-  iot: Cpu,
+  mobile: Smartphone,
   ai: Brain
 };
 
@@ -58,7 +60,7 @@ export function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {Object.entries(t.categories).map(([key, value]) => {
-            const Icon = serviceIcons[key];
+            const Icon = serviceIcons[key as keyof ServiceIconsType];
             return (
               <motion.button
                 key={key}
@@ -95,7 +97,7 @@ export function Services() {
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
             {t.categories[activeService as keyof typeof t.categories].items.map((item, index) => {
-              const Icon = serviceIcons[activeService];
+              const Icon = serviceIcons[activeService as keyof ServiceIconsType];
               return (
                 <motion.div
                   key={index}
