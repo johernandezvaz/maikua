@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Menu, X, Globe } from "lucide-react";
@@ -8,28 +8,13 @@ import { useLanguage } from "@/lib/i18n/context";
 import { translations, NavKeys } from "@/lib/i18n/translations";
 
 const navItems: Array<{ href: string; label: NavKeys }> = [
-  { href: "#inicio", label: "inicio" },
-  { href: "#about", label: "nosotros" },
-  { href: "#services", label: "servicios" },
-  { href: "#research", label: "investigacion" },
-  { href: "#projects", label: "proyectos" },
-  { href: "#contacto", label: "contacto" },
+  { href: "/", label: "inicio" },
 ];
 
-export function Navigation() {
+export function SecretNavigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const handleClick = (href: string) => {
     setIsOpen(false);
@@ -53,21 +38,17 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "glass shadow-lg"
-          : "bg-transparent"
-      }`}
+      className="fixed w-full z-50 transition-all duration-300 glass shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <button
-            onClick={() => handleClick("#inicio")}
+            onClick={() => handleClick("/")}
             className="flex items-center space-x-2"
           >
             <Image
-              src={isScrolled ? "/maikua_logo.png" : "/white_logo.png"}
+              src="/maikua_logo.png"
               alt="Maikua Logo"
               width={40}
               height={40}
@@ -80,11 +61,7 @@ export function Navigation() {
               <button
                 key={item.href}
                 onClick={() => handleClick(item.href)}
-                className={`text-sm font-medium transition-colors ${
-                  isScrolled
-                    ? "text-text hover:text-accent"
-                    : "text-cream hover:text-accent"
-                }`}
+                className="text-sm font-medium text-text hover:text-accent transition-colors"
               >
                 {translations[language].nav[item.label]}
               </button>
@@ -94,11 +71,7 @@ export function Navigation() {
             <div className="relative">
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className={`flex items-center space-x-1 ${
-                  isScrolled
-                    ? "text-text hover:text-accent"
-                    : "text-cream hover:text-accent"
-                }`}
+                className="flex items-center space-x-1 text-text hover:text-accent"
               >
                 <Globe className="h-4 w-4" />
                 <span className="uppercase">{language}</span>
@@ -107,10 +80,10 @@ export function Navigation() {
               <AnimatePresence>
                 {isLangMenuOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 1, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute right-0 mt-2 py-2 w-24 glass rounded-lg shadow-lg"
+                    exit={{ opacity: 1, y: -10 }}
+                    className="absolute right-0 mt-2 py-2 w-24 bg-white rounded-lg shadow-lg"
                   >
                     {['es', 'en', 'fr'].map((lang) => (
                       <button
@@ -138,9 +111,9 @@ export function Navigation() {
             className="md:hidden p-2 rounded-lg"
           >
             {isOpen ? (
-              <X className={isScrolled ? "text-text" : "text-cream"} />
+              <X className="text-text" />
             ) : (
-              <Menu className={isScrolled ? "text-text" : "text-cream"} />
+              <Menu className="text-text" />
             )}
           </button>
         </div>
@@ -153,7 +126,7 @@ export function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass"
+            className="md:hidden bg-white"
           >
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
