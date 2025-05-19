@@ -369,6 +369,51 @@ export const translations = {
       contactTitle: "¿Los precios están fuera de tu presupuesto?",
       contactDescription: "Entendemos que cada proyecto es único. Contáctanos para discutir tu presupuesto y encontrar una solución que se ajuste a tus necesidades.",
       contactButton: "Hablar sobre mi proyecto"
+    },
+    secretForm: {
+      title: "Formulario de Contacto",
+      form: {
+        fullName: "Nombre completo",
+        email: "Correo electrónico",
+        phone: "Número de teléfono (opcional)",
+        serviceType: "Tipo de servicio que necesita",
+        selectService: "Selecciona un servicio",
+        services: {
+          web: "Desarrollo Web",
+          mobile: "Desarrollo Móvil",
+          ai: "Proyecto con Inteligencia Artificial",
+          other: "Otro"
+        },
+        specifyService: "Especifica el servicio",
+        projectDescription: "Cuéntanos en pocas palabras qué necesitas desarrollar o en qué podemos ayudarte",
+        budget: "Presupuesto estimado (opcional)",
+        selectBudget: "Selecciona un rango de presupuesto",
+        budgetRanges: {
+          less500: "Menos de $500",
+          range500to1000: "$500 – $1000",
+          range1000to3000: "$1000 – $3000",
+          more3000: "Más de $3000"
+        },
+        preferredLanguage: "¿En qué idioma prefieres que te contactemos?",
+        selectLanguage: "Selecciona un idioma",
+        languages: {
+          es: "Español",
+          en: "Inglés",
+          fr: "Francés"
+        },
+        foundUs: "¿Cómo nos encontraste? (opcional)",
+        selectFoundUs: "Selecciona una opción",
+        foundUsOptions: {
+          social: "Redes sociales",
+          recommendation: "Recomendación",
+          google: "Google",
+          other: "Otro"
+        },
+        submit: "Enviar formulario",
+        sending: "Enviando...",
+        success: "¡Formulario enviado! Te contactaremos pronto.",
+        error: "Hubo un error al enviar el formulario. Por favor, intenta nuevamente."
+      }
     }
   },
   en: {
@@ -739,6 +784,51 @@ export const translations = {
       contactTitle: "Prices above your budget?",
       contactDescription: "We understand that each project is unique. Contact us to discuss your budget and find a solution that fits your needs.",
       contactButton: "Discuss my project"
+    },
+    secretForm: {
+      title: "Contact Form",
+      form: {
+        fullName: "Full name",
+        email: "Email",
+        phone: "Phone number (optional)",
+        serviceType: "Type of service needed",
+        selectService: "Select a service",
+        services: {
+          web: "Web Development",
+          mobile: "Mobile Development",
+          ai: "AI Project",
+          other: "Other"
+        },
+        specifyService: "Specify the service",
+        projectDescription: "Tell us briefly what you need to develop or how we can help you",
+        budget: "Estimated budget (optional)",
+        selectBudget: "Select a budget range",
+        budgetRanges: {
+          less500: "Less than $500",
+          range500to1000: "$500 – $1000",
+          range1000to3000: "$1000 – $3000",
+          more3000: "More than $3000"
+        },
+        preferredLanguage: "What language would you prefer to be contacted in?",
+        selectLanguage: "Select a language",
+        languages: {
+          es: "Spanish",
+          en: "English",
+          fr: "French"
+        },
+        foundUs: "How did you find us? (optional)",
+        selectFoundUs: "Select an option",
+        foundUsOptions: {
+          social: "Social media",
+          recommendation: "Recommendation",
+          google: "Google",
+          other: "Other"
+        },
+        submit: "Submit form",
+        sending: "Sending...",
+        success: "Form submitted! We'll contact you soon.",
+        error: "There was an error submitting the form. Please try again."
+      }
     }
   },
   fr: {
@@ -1109,6 +1199,51 @@ export const translations = {
       contactTitle: "Les prix dépassent votre budget ?",
       contactDescription: "Nous comprenons que chaque projet est unique. Contactez-nous pour discuter de votre budget et trouver une solution adaptée à vos besoins.",
       contactButton: "Discuter de mon projet"
+    },
+    secretForm: {
+      title: "Formulaire de Contact",
+      form: {
+        fullName: "Nom complet",
+        email: "Email",
+        phone: "Numéro de téléphone (optionnel)",
+        serviceType: "Type de service requis",
+        selectService: "Sélectionnez un service",
+        services: {
+          web: "Développement Web",
+          mobile: "Développement Mobile",
+          ai: "Projet IA",
+          other: "Autre"
+        },
+        specifyService: "Précisez le service",
+        projectDescription: "Dites-nous brièvement ce que vous souhaitez développer ou comment nous pouvons vous aider",
+        budget: "Budget estimé (optionnel)",
+        selectBudget: "Sélectionnez une fourchette de budget",
+        budgetRanges: {
+          less500: "Moins de 500$",
+          range500to1000: "500$ – 1000$",
+          range1000to3000: "1000$ – 3000$",
+          more3000: "Plus de 3000$"
+        },
+        preferredLanguage: "Dans quelle langue préférez-vous être contacté ?",
+        selectLanguage: "Sélectionnez une langue",
+        languages: {
+          es: "Espagnol",
+          en: "Anglais",
+          fr: "Français"
+        },
+        foundUs: "Comment nous avez-vous trouvé ? (optionnel)",
+        selectFoundUs: "Sélectionnez une option",
+        foundUsOptions: {
+          social: "Réseaux sociaux",
+          recommendation: "Recommandation",
+          google: "Google",
+          other: "Autre"
+        },
+        submit: "Envoyer le formulaire",
+        sending: "Envoi en cours...",
+        success: "Formulaire envoyé ! Nous vous contacterons bientôt.",
+        error: "Une erreur s'est produite lors de l'envoi du formulaire. Veuillez réessayer."
+      }
     }
   }
 } as const;
