@@ -8,7 +8,7 @@ import { useLanguage } from "@/lib/i18n/context";
 import { translations, NavKeys } from "@/lib/i18n/translations";
 
 const navItems: Array<{ href: string; label: NavKeys }> = [
-  { href: "/", label: "inicio" },
+  { href: "https://maikua.com.mx/", label: "inicio" },
 ];
 
 export function SecretNavigation() {
@@ -44,7 +44,7 @@ export function SecretNavigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <button
-            onClick={() => handleClick("/")}
+            onClick={() => handleClick("https://maikua.com.mx/")}
             className="flex items-center space-x-2"
           >
             <Image
