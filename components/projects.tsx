@@ -11,6 +11,14 @@ const projectsData = {
   es: [
     {
       category: "web",
+      title: "Sapphirus",
+      description: "E-commerce de productos americanos",
+      image: "/clients/400440972_122102821490108415_2965658771073295181_n.jpg",
+      tags: ["Nextjs", "TailwindCSS", "Stripe"],
+      link: "https://sapphirus.com.mx/"
+    },
+    {
+      category: "web",
       title: "Asecalab",
       description: "Sitio web corporativo para laboratorio de pruebas mecánicas.",
       image: "/clients/ASE-CA LAB-02.png",
@@ -45,6 +53,14 @@ const projectsData = {
   en: [
     {
       category: "web",
+      title: "Sapphirus",
+      description: "American Products E-commerce",
+      image: "/clients/400440972_122102821490108415_2965658771073295181_n.jpg",
+      tags: ["Nextjs", "TailwindCSS", "Stripe"],
+      link: "https://sapphirus.com.mx/"
+    },
+    {
+      category: "web",
       title: "Asecalab",
       description: "Corporate website for mechanical testing laboratory.",
       image: "/clients/ASE-CA LAB-02.png",
@@ -77,6 +93,14 @@ const projectsData = {
     }
   ],
   fr: [
+    {
+      category: "web",
+      title: "Sapphirus",
+      description: "Commerce électronique de produits américains",
+      image: "/clients/400440972_122102821490108415_2965658771073295181_n.jpg",
+      tags: ["Nextjs", "TailwindCSS", "Stripe"],
+      link: "https://sapphirus.com.mx/"
+    },
     {
       category: "web",
       title: "Asecalab",

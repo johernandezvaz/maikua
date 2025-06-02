@@ -9,6 +9,13 @@ import { translations } from "@/lib/i18n/translations";
 const testimonialsData = {
   es: [
     {
+      name: "Sapphirus",
+      type: "E-commerce de productos americanos",
+      logo: "/clients/400440972_122102821490108415_2965658771073295181_n.jpg",
+      content: "En Sapphirus sabíamos que era momento de dar el siguiente paso y digitalizarnos, pero no teníamos conocimientos claros sobre cómo iniciar. Fue entonces cuando conocimos a Maikua, y desde el primer contacto supimos que estábamos en buenas manos. Su equipo nos brindó un asesoramiento constante, claro y cercano. Durante todo el proceso de construcción de nuestro sitio web, la comunicación fue impecable. Supieron escuchar nuestras necesidades, guiarnos con paciencia y proponer soluciones que realmente se ajustaban a nuestra marca. Gracias a ellos, hoy contamos con un e-commerce funcional y profesional que permitirá a nuestros clientes comprar directamente desde la comodidad de su hogar, sin necesidad de visitar la tienda física. Este avance representa un gran beneficio para nuestro negocio y una nueva forma de conectar con quienes nos eligen. Estamos totalmente agradecidos con Maikua por acompañarnos en este proceso de transformación digital. Sin duda, su compromiso y experiencia marcaron la diferencia",
+      link: "https://sapphirus.com.mx/"
+    },
+    {
       name: "Ase-Ca-Lab",
       type: "Laboratorio de Pruebas Mecánicas",
       logo: "/clients/ASE-CA LAB-02.png",
@@ -31,6 +38,13 @@ const testimonialsData = {
   ],
   en: [
     {
+      name: "Sapphirus",
+      type: "American Products E-commerce",
+      logo: "/clients/400440972_122102821490108415_2965658771073295181_n.jpg",
+      content: "At Sapphirus, we knew it was time to take the next step and go digital, but we didn't have a clear understanding of how to get started. That's when we met Maikua, and from the first contact, we knew we were in good hands. Their team provided us with consistent, clear, and friendly advice. Throughout the entire process of building our website, communication was impeccable. They listened to our needs, guided us patiently, and proposed solutions that truly fit our brand. Thanks to them, today we have a functional and professional e-commerce platform that will allow our customers to purchase directly from the comfort of their homes, without needing to visit a physical store. This advancement represents a huge benefit for our business and a new way to connect with those who choose us. We are incredibly grateful to Maikua for supporting us in this digital transformation process. Without a doubt, their commitment and experience made the difference.",
+      link: "https://sapphirus.com.mx/"
+    },
+    {
       name: "Ase-Ca-Lab",
       type: "Mechanical Testing Laboratory",
       logo: "/clients/ASE-CA LAB-02.png",
@@ -52,6 +66,13 @@ const testimonialsData = {
     }
   ],
   fr: [
+    {
+      name: "Sapphirus",
+      type: "Commerce électronique de produits américains",
+      logo: "/clients/400440972_122102821490108415_2965658771073295181_n.jpg",
+      content: "Chez Sapphirus, nous savions qu'il était temps de franchir une nouvelle étape et de passer au numérique, mais nous ne savions pas vraiment comment nous y prendre. C'est alors que nous avons rencontré Maikua et, dès le premier contact, nous avons su que nous étions entre de bonnes mains. Leur équipe nous a prodigué des conseils cohérents, clairs et conviviaux. Tout au long du processus de création de notre site web, la communication a été irréprochable. Ils ont été à l'écoute de nos besoins, nous ont guidés avec patience et nous ont proposé des solutions parfaitement adaptées à notre marque. Grâce à eux, nous disposons aujourd'hui d'une plateforme e-commerce fonctionnelle et professionnelle qui permettra à nos clients d'acheter directement depuis chez eux, sans avoir à se déplacer en magasin. Cette avancée représente un atout majeur pour notre entreprise et une nouvelle façon d'interagir avec ceux qui nous choisissent. Nous sommes extrêmement reconnaissants à Maikua de nous avoir accompagnés dans cette transformation numérique. Leur engagement et leur expérience ont incontestablement fait la différence.",
+      link: "https://sapphirus.com.mx/"
+    },
     {
       name: "Ase-Ca-Lab",
       type: "Laboratoire d'Essais Mécaniques",
