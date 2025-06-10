@@ -16,6 +16,26 @@ export const translations = {
       description: "Desarrollamos sitios web, aplicaciones y sistemas inteligentes que transforman tu visión en realidad, combinando diseño moderno con tecnología avanzada.",
       cta: "Comienza tu proyecto"
     },
+    promotion: {
+      badge: "PROMOCIÓN ESPECIAL",
+      title: "¿Necesitas un sitio web para tu negocio o proyecto personal?",
+      description: "En Maikua, estamos ofreciendo sitios web y aplicaciones móviles desde $1500 MXN. Perfecto para quienes buscan una solución rápida y accesible.",
+      features: [
+        "Sitios web de hasta 3 páginas",
+        "Diseño responsivo y profesional", 
+        "Formularios de contacto simples",
+        "Entrega en pocos días"
+      ],
+      note: {
+        title: "Nota",
+        description: "El dominio ya está incluido y la promoción aplica solo para proyectos con requerimientos básicos."
+      },
+      cta: {
+        title: "¡No dejes pasar esta oportunidad! Contáctanos ahora para más detalles y dale vida a tu idea.",
+        button: "Enviar Mensaje",
+        or: "o"
+      }
+    },
     about: {
       title: "Conócenos",
       tabs: {
@@ -431,6 +451,26 @@ export const translations = {
       description: "We develop websites, applications, and intelligent systems that transform your vision into reality, combining modern design with advanced technology.",
       cta: "Start your project"
     },
+    promotion: {
+      badge: "SPECIAL PROMOTION",
+      title: "Need a website for your business or personal project?",
+      description: "At Maikua, we're offering websites and mobile applications starting from $78 USD. Perfect for those looking for a quick and accessible solution.",
+      features: [
+        "Websites up to 3 pages",
+        "Responsive and professional design",
+        "Simple contact forms", 
+        "Delivery in few days"
+      ],
+      note: {
+        title: "Note",
+        description: "Domain is already included and the promotion applies only to projects with basic requirements."
+      },
+      cta: {
+        title: "Don't miss this opportunity! Contact us now for more details and bring your idea to life.",
+        button: "Send Message",
+        or: "or"
+      }
+    },
     about: {
       title: "About Us",
       tabs: {
@@ -845,6 +885,26 @@ export const translations = {
       subtitle: "Nous créons des solutions numériques qui dynamisent votre entreprise",
       description: "Nous développons des sites web, des applications et des systèmes intelligents qui transforment votre vision en réalité, en combinant design moderne et technologie avancée.",
       cta: "Démarrer votre projet"
+    },
+    promotion: {
+      badge: "PROMOTION SPÉCIALE",
+      title: "Besoin d'un site web pour votre entreprise ou projet personnel ?",
+      description: "Chez Maikua, nous proposons des sites web et applications mobiles à partir de 68€. Parfait pour ceux qui cherchent une solution rapide et accessible.",
+      features: [
+        "Sites web jusqu'à 3 pages",
+        "Design responsive et professionnel",
+        "Formulaires de contact simples",
+        "Livraison en quelques jours"
+      ],
+      note: {
+        title: "Note",
+        description: "Le domaine est déjà inclus et la promotion s'applique uniquement aux projets avec des exigences de base."
+      },
+      cta: {
+        title: "Ne manquez pas cette opportunité ! Contactez-nous maintenant pour plus de détails et donnez vie à votre idée.",
+        button: "Envoyer un Message",
+        or: "ou"
+      }
     },
     about: {
       title: "À propos de nous",

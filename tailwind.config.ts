@@ -10,6 +10,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        black_gradient: {
+          DEFAULT: '#333333',
+        },
+        red_gradient: {
+          DEFAULT: '#dd1818',
+        },
         primary: {
           DEFAULT: '#E94E4E',
           hover: '#d43d3d',
