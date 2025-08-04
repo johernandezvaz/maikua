@@ -2,17 +2,11 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle, Mail, MessageCircle } from "lucide-react";
-import { useLanguage } from "@/lib/i18n/context";
-import { translations } from "@/lib/i18n/translations";
 
 export function Promotion() {
-  const { language } = useLanguage();
-  const t = translations[language].promotion;
 
   const handleContactClick = () => {
-    const formUrl = language === 'es' ? '/secret-form' : 
-                   language === 'en' ? '/secret-form' : 
-                   '/secret-form';
+    const formUrl = '/secret-form';
     window.open(formUrl, '_blank');
   };
 
@@ -37,7 +31,7 @@ export function Promotion() {
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-semibold mb-6"
           >
-            🌐 {t.badge}
+            🌐 SPECIAL PROMOTION
           </motion.div>
 
           <motion.h2
@@ -46,7 +40,7 @@ export function Promotion() {
             transition={{ delay: 0.3 }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            {t.title}
+            Need a website for your business or personal project?
           </motion.h2>
 
           <motion.p
@@ -55,7 +49,7 @@ export function Promotion() {
             transition={{ delay: 0.4 }}
             className="text-lg md:text-xl mb-8 max-w-4xl mx-auto"
           >
-            {t.description}
+            At Maikua, we're offering websites and mobile applications starting from $78 USD. Perfect for those looking for a quick and accessible solution.
           </motion.p>
 
           <motion.div
@@ -64,7 +58,12 @@ export function Promotion() {
             transition={{ delay: 0.5 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8"
           >
-            {t.features.map((feature, index) => (
+            {[
+              "Websites up to 3 pages",
+              "Responsive and professional design",
+              "Simple contact forms",
+              "Delivery in few days"
+            ].map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -85,7 +84,7 @@ export function Promotion() {
             className="bg-white/10 rounded-lg p-4 mb-8 max-w-2xl mx-auto"
           >
             <p className="text-sm">
-              <strong>{t.note.title}:</strong> {t.note.description}
+              <strong>Note:</strong> Domain is already included and the promotion applies only to projects with basic requirements.
             </p>
           </motion.div>
 
@@ -96,7 +95,7 @@ export function Promotion() {
             className="space-y-4"
           >
             <p className="text-xl font-semibold">
-              {t.cta.title} ✨
+              Don't miss this opportunity! Contact us now for more details and bring your idea to life. ✨
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -105,17 +104,17 @@ export function Promotion() {
                 className="inline-flex items-center px-8 py-3 bg-white text-primary rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg"
               >
                 <MessageCircle className="h-5 w-5 mr-2" />
-                {t.cta.button}
+                Send Message
               </button>
               
               <div className="flex items-center space-x-4 text-sm">
-                <span>{t.cta.or}</span>
+                <span>or</span>
                 <a
-                  href="mailto:contacto@maikua.com.mx"
+                  href="mailto:contact@maikua.com"
                   className="inline-flex items-center hover:underline"
                 >
                   <Mail className="h-4 w-4 mr-1" />
-                  contacto@maikua.com.mx
+                  contact@maikua.com
                 </a>
               </div>
             </div>

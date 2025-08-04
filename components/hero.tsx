@@ -2,15 +2,11 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useLanguage } from "@/lib/i18n/context";
-import { translations } from "@/lib/i18n/translations";
 
 export function Hero() {
-  const { language } = useLanguage();
-  const t = translations[language];
 
   return (
-    <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden bg-brown">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-brown">
       {/* Video Background */}
       <div className="absolute inset-0 w-full h-full">
         <video
@@ -46,7 +42,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-7xl font-bold text-cream mb-6"
         >
-          {t.hero.title}
+          Maikua
         </motion.h1>
 
         <motion.p
@@ -55,7 +51,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-cream mb-8"
         >
-          {t.hero.subtitle}
+          We create digital solutions that drive your business
         </motion.p>
 
         <motion.p
@@ -64,7 +60,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg text-cream/90 max-w-3xl mx-auto"
         >
-          {t.hero.description}
+          We develop websites, applications, and intelligent systems that transform your vision into reality, combining modern design with advanced technology.
         </motion.p>
 
         <motion.div
@@ -73,8 +69,8 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-12"
         >
-          <a href="#contacto" className="btn-brutal">
-            {t.hero.cta}
+          <a href="#contact" className="btn-brutal">
+            Start your project
           </a>
         </motion.div>
       </div>

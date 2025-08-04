@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Globe, Brain, Smartphone } from "lucide-react";
-import { useLanguage } from "@/lib/i18n/context";
-import { translations } from "@/lib/i18n/translations";
 
 type ServiceIconsType = {
   web: typeof Globe;
@@ -18,10 +16,61 @@ const serviceIcons: ServiceIconsType = {
   ai: Brain
 };
 
+const servicesData = {
+  web: {
+    title: "Web Development",
+    items: [
+      {
+        title: "Websites",
+        description: "We design and develop modern, fast, and responsive websites for any device."
+      },
+      {
+        title: "E-commerce",
+        description: "We create your virtual store with all the necessary tools to sell online."
+      },
+      {
+        title: "Web Systems",
+        description: "We develop custom web systems and applications for your business."
+      }
+    ]
+  },
+  mobile: {
+    title: "Mobile Development",
+    items: [
+      {
+        title: "Native Apps",
+        description: "Development of native applications for iOS and Android with optimal performance."
+      },
+      {
+        title: "Cross-platform Apps",
+        description: "Efficient solutions that work across multiple devices and systems."
+      },
+      {
+        title: "Enterprise Apps",
+        description: "Robust and secure applications for specific business needs."
+      }
+    ]
+  },
+  ai: {
+    title: "Artificial Intelligence",
+    items: [
+      {
+        title: "Machine Learning",
+        description: "Predictive models and data analysis for decision making."
+      },
+      {
+        title: "Language Processing",
+        description: "Text analysis and natural language processing."
+      },
+      {
+        title: "Computer Vision",
+        description: "Image analysis and processing for recognition and classification."
+      }
+    ]
+  }
+};
 export function Services() {
   const [activeService, setActiveService] = useState("web");
-  const { language } = useLanguage();
-  const t = translations[language].services;
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
@@ -54,12 +103,12 @@ export function Services() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            {t.title}
+            Our Solutions
           </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {Object.entries(t.categories).map(([key, value]) => {
+          {Object.entries(servicesData).map(([key, value]) => {
             const Icon = serviceIcons[key as keyof ServiceIconsType];
             return (
               <motion.button
@@ -96,7 +145,7 @@ export function Services() {
             exit="exit"
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            {t.categories[activeService as keyof typeof t.categories].items.map((item, index) => {
+            {servicesData[activeService as keyof typeof servicesData].items.map((item, index) => {
               const Icon = serviceIcons[activeService as keyof ServiceIconsType];
               return (
                 <motion.div

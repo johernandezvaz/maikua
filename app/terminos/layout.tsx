@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Términos y Condiciones | Maikua',
-  description: 'Términos y condiciones de uso de Maikua. Conoce las reglas y políticas que rigen nuestros servicios.',
+  title: 'Terms and Conditions | Maikua',
+  description: 'Maikua terms and conditions of use. Learn about the rules and policies that govern our services.',
   robots: 'noindex, follow',
 };
 

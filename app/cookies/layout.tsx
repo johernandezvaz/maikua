@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Política de Cookies | Maikua',
-  description: 'Política de cookies de Maikua. Conoce cómo utilizamos las cookies en nuestro sitio web.',
+  title: 'Cookie Policy | Maikua',
+  description: 'Maikua cookie policy. Learn how we use cookies on our website.',
   robots: 'noindex, follow',
 };
 

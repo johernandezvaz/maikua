@@ -3,24 +3,20 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { Menu, X, Globe } from "lucide-react";
-import { useLanguage } from "@/lib/i18n/context";
-import { translations, NavKeys } from "@/lib/i18n/translations";
+import { Menu, X } from "lucide-react";
 
-const navItems: Array<{ href: string; label: NavKeys }> = [
-  { href: "#inicio", label: "inicio" },
-  { href: "#about", label: "nosotros" },
-  { href: "#services", label: "servicios" },
-  { href: "#research", label: "investigacion" },
-  { href: "#projects", label: "proyectos" },
-  { href: "#contacto", label: "contacto" },
+const navItems = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#services", label: "Services" },
+  { href: "#research", label: "Research" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
-  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,7 +59,7 @@ export function Navigation() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <button
-            onClick={() => handleClick("#inicio")}
+            onClick={() => handleClick("#home")}
             className="flex items-center space-x-2"
           >
             <Image
@@ -86,50 +82,9 @@ export function Navigation() {
                     : "text-cream hover:text-accent"
                 }`}
               >
-                {translations[language].nav[item.label]}
+                {item.label}
               </button>
             ))}
-
-            {/* Language Switcher */}
-            <div className="relative">
-              <button
-                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className={`flex items-center space-x-1 ${
-                  isScrolled
-                    ? "text-text hover:text-accent"
-                    : "text-cream hover:text-accent"
-                }`}
-              >
-                <Globe className="h-4 w-4" />
-                <span className="uppercase">{language}</span>
-              </button>
-
-              <AnimatePresence>
-                {isLangMenuOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute right-0 mt-2 py-2 w-24 glass rounded-lg shadow-lg"
-                  >
-                    {['es', 'en', 'fr'].map((lang) => (
-                      <button
-                        key={lang}
-                        onClick={() => {
-                          setLanguage(lang as 'es' | 'en' | 'fr');
-                          setIsLangMenuOpen(false);
-                        }}
-                        className={`block w-full px-4 py-2 text-sm text-text hover:text-accent transition-colors ${
-                          language === lang ? 'text-accent' : ''
-                        }`}
-                      >
-                        {lang.toUpperCase()}
-                      </button>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -162,31 +117,9 @@ export function Navigation() {
                   onClick={() => handleClick(item.href)}
                   className="block w-full text-left text-text hover:text-accent transition-colors"
                 >
-                  {translations[language].nav[item.label]}
+                  {item.label}
                 </button>
               ))}
-
-              {/* Mobile Language Switcher */}
-              <div className="pt-4 border-t border-gray-200">
-                <div className="flex space-x-4">
-                  {['es', 'en', 'fr'].map((lang) => (
-                    <button
-                      key={lang}
-                      onClick={() => {
-                        setLanguage(lang as 'es' | 'en' | 'fr');
-                        setIsOpen(false);
-                      }}
-                      className={`px-3 py-1 rounded-full text-sm ${
-                        language === lang
-                          ? 'bg-accent text-white'
-                          : 'text-text hover:text-accent'
-                      }`}
-                    >
-                      {lang.toUpperCase()}
-                    </button>
-                  ))}
-                </div>
-              </div>
             </div>
           </motion.div>
         )}

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Formulario de Contacto | Maikua',
-  description: 'Formulario de contacto detallado de Maikua.',
+  title: 'Contact Form | Maikua',
+  description: 'Detailed contact form for Maikua.',
   robots: 'noindex, nofollow',
 };
 

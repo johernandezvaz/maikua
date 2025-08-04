@@ -3,13 +3,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useLanguage } from "@/lib/i18n/context";
-import { translations } from "@/lib/i18n/translations";
 
 export function About() {
   const [activeTab, setActiveTab] = useState("about");
-  const { language } = useLanguage();
-  const t = translations[language];
 
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
@@ -34,16 +30,16 @@ export function About() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            {t.about.title}
+            About Us
           </h2>
         </motion.div>
 
         <Tabs defaultValue="about" className="w-full max-w-4xl mx-auto">
           <TabsList className="grid w-full grid-cols-4 rounded-2xl h-auto p-1 glass border border-white/20 backdrop-blur-xl">
-            <TabsTrigger value="about" className="data-[state=active]:bg-white/30">{t.about.tabs.about}</TabsTrigger>
-            <TabsTrigger value="vision" className="data-[state=active]:bg-white/30">{t.about.tabs.vision}</TabsTrigger>
-            <TabsTrigger value="mision" className="data-[state=active]:bg-white/30">{t.about.tabs.mision}</TabsTrigger>
-            <TabsTrigger value="valores" className="data-[state=active]:bg-white/30">{t.about.tabs.valores}</TabsTrigger>
+            <TabsTrigger value="about" className="data-[state=active]:bg-white/30">About</TabsTrigger>
+            <TabsTrigger value="vision" className="data-[state=active]:bg-white/30">Vision</TabsTrigger>
+            <TabsTrigger value="mission" className="data-[state=active]:bg-white/30">Mission</TabsTrigger>
+            <TabsTrigger value="values" className="data-[state=active]:bg-white/30">Values</TabsTrigger>
           </TabsList>
 
           <TabsContent value="about" className="mt-8">
@@ -52,10 +48,13 @@ export function About() {
               animate={{ opacity: 1, y: 0 }}
               className="glass p-8 rounded-2xl border border-white/20 backdrop-blur-xl"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-primary">{t.about.content.about.title}</h3>
-              {t.about.content.about.description.map((paragraph, index) => (
-                <p key={index} className="text-lg leading-relaxed mt-4">{paragraph}</p>
-              ))}
+              <h3 className="text-2xl font-semibold mb-4 text-primary">About Us</h3>
+              <p className="text-lg leading-relaxed mt-4">
+                At Maikua, we merge innovative technology with a deep commitment to research and development of digital solutions. We design and develop advanced websites, such as online stores, management systems (ORM, ERP), and unique platforms, with the goal of empowering people and businesses.
+              </p>
+              <p className="text-lg leading-relaxed mt-4">
+                We believe in the power of Artificial Intelligence to improve society, driving ethical and beneficial solutions that enable building a fairer and more efficient future for all.
+              </p>
             </motion.div>
           </TabsContent>
 
@@ -65,31 +64,40 @@ export function About() {
               animate={{ opacity: 1, y: 0 }}
               className="glass p-8 rounded-2xl border border-white/20 backdrop-blur-xl"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-accent">{t.about.content.vision.title}</h3>
-              <p className="text-lg leading-relaxed">{t.about.content.vision.description}</p>
+              <h3 className="text-2xl font-semibold mb-4 text-accent">Our Vision</h3>
+              <p className="text-lg leading-relaxed">
+                To be a global reference in the development of digital platforms and Artificial Intelligence applications that contribute to social and economic advancement, creating tools that are useful, accessible, and capable of transforming lives.
+              </p>
             </motion.div>
           </TabsContent>
 
-          <TabsContent value="mision" className="mt-8">
+          <TabsContent value="mission" className="mt-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="glass p-8 rounded-2xl border border-white/20 backdrop-blur-xl"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-primary">{t.about.content.mision.title}</h3>
-              <p className="text-lg leading-relaxed">{t.about.content.mision.description}</p>
+              <h3 className="text-2xl font-semibold mb-4 text-primary">Our Mission</h3>
+              <p className="text-lg leading-relaxed">
+                To provide innovative digital solutions and Artificial Intelligence research services, designed to solve real problems and improve business efficiency. From developing robust websites to advanced AI systems, our goal is to positively impact communities and foster sustainable growth.
+              </p>
             </motion.div>
           </TabsContent>
 
-          <TabsContent value="valores" className="mt-8">
+          <TabsContent value="values" className="mt-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="glass p-8 rounded-2xl border border-white/20 backdrop-blur-xl"
             >
-              <h3 className="text-2xl font-semibold mb-4 text-accent">{t.about.content.valores.title}</h3>
+              <h3 className="text-2xl font-semibold mb-4 text-accent">Our Values</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {t.about.content.valores.items.map((valor, index) => (
+                {[
+                  { title: "Innovation", desc: "We develop creative solutions that anticipate future needs." },
+                  { title: "Social Commitment", desc: "We use technology as a tool to generate positive impact." },
+                  { title: "Transparency", desc: "We act with ethics and clarity in all our projects." },
+                  { title: "Excellence", desc: "We strive to offer the highest quality in every solution." }
+                ].map((valor, index) => (
                   <div key={index} className="glass p-4 rounded-xl border border-white/10">
                     <h4 className="text-primary font-semibold mb-2">{valor.title}</h4>
                     <p className="text-text/80">{valor.desc}</p>

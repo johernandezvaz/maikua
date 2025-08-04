@@ -2,7 +2,6 @@ import './globals.css';
 import type { Metadata } from 'next';
 import type { Viewport } from 'next';
 import { Inter } from 'next/font/google';
-import { LanguageProvider } from '@/lib/i18n/context';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,33 +12,33 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Maikua - Soluciones Digitales e Investigación en IA',
-  description: 'Desarrollamos sitios web, aplicaciones y sistemas inteligentes que transforman tu visión en realidad, combinando diseño moderno con tecnología avanzada.',
-  keywords: 'desarrollo web, aplicaciones móviles, inteligencia artificial, IoT, investigación IA, desarrollo de software, Chihuahua',
+  title: 'Maikua - Digital Solutions & AI Research',
+  description: 'We develop websites, applications, and intelligent systems that transform your vision into reality, combining modern design with advanced technology.',
+  keywords: 'web development, mobile applications, artificial intelligence, IoT, AI research, software development, digital solutions',
   authors: [{ name: 'Maikua' }],
   creator: 'Maikua',
   publisher: 'Maikua',
   robots: 'index, follow',
   openGraph: {
     type: 'website',
-    locale: 'es_MX',
-    url: 'https://maikua.com.mx',
+    locale: 'en_US',
+    url: 'https://maikua.com',
     siteName: 'Maikua',
-    title: 'Maikua - Soluciones Digitales e Investigación en IA',
-    description: 'Desarrollamos sitios web, aplicaciones y sistemas inteligentes que transforman tu visión en realidad.',
+    title: 'Maikua - Digital Solutions & AI Research',
+    description: 'We develop websites, applications, and intelligent systems that transform your vision into reality.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Maikua - Soluciones Digitales e Investigación en IA',
+        alt: 'Maikua - Digital Solutions & AI Research',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Maikua - Soluciones Digitales e Investigación en IA',
-    description: 'Desarrollamos sitios web, aplicaciones y sistemas inteligentes que transforman tu visión en realidad.',
+    title: 'Maikua - Digital Solutions & AI Research',
+    description: 'We develop websites, applications, and intelligent systems that transform your vision into reality.',
     images: ['/og-image.jpg'],
   },
   icons: {
@@ -79,9 +78,7 @@ export default function RootLayout({
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
       <body className={inter.className}>
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+        {children}
       </body>
     </html>
   );

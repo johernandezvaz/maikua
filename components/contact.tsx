@@ -8,23 +8,53 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '@/lib/emailjs';
-import { useLanguage } from "@/lib/i18n/context";
-import { translations } from "@/lib/i18n/translations";
 
 const contactSchema = z.object({
-  name: z.string().min(2, "El nombre es demasiado corto"),
-  email: z.string().email("Correo electrónico inválido"),
-  subject: z.string().min(1, "Por favor selecciona un asunto"),
-  message: z.string().min(10, "El mensaje es demasiado corto")
+  name: z.string().min(2, "Name is too short"),
+  email: z.string().email("Invalid email address"),
+  subject: z.string().min(1, "Please select a subject"),
+  message: z.string().min(10, "Message is too short")
 });
 
 type ContactForm = z.infer<typeof contactSchema>;
 
+const contactData = {
+  title: "Contact Us",
+  subtitle: "We're here to help. Contact us to discuss your projects or resolve your doubts.",
+  form: {
+    name: "Name",
+    email: "Email",
+    subject: {
+      label: "Subject",
+      placeholder: "Select a subject",
+      options: {
+        quote: "Quote Request",
+        support: "Technical Support",
+        project: "Project Inquiry",
+        collaboration: "Collaboration Proposal",
+        employment: "Employment Opportunities",
+        other: "Other"
+      }
+    },
+    message: "Message",
+    submit: "Send Message",
+    sending: "Sending...",
+    success: "Message sent! We'll respond as soon as possible.",
+    error: "There was a problem sending your message. Please try again."
+  },
+  info: {
+    email: "Email",
+    phone: "Phone",
+    location: "Location",
+    schedule: {
+      title: "Office Hours",
+      hours: "Monday to Friday: 9:00 AM - 6:00 PM"
+    }
+  }
+};
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const { language } = useLanguage();
-  const t = translations[language].contact;
 
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactForm>({
     resolver: zodResolver(contactSchema)
@@ -58,7 +88,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contacto" className="py-20 relative overflow-hidden">
+    <section id="contact" className="py-20 relative overflow-hidden">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -73,10 +103,10 @@ export function Contact() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            {t.title}
+            {contactData.title}
           </h2>
           <p className="text-xl text-text/80">
-            {t.subtitle}
+            {contactData.subtitle}
           </p>
         </motion.div>
 
@@ -92,8 +122,8 @@ export function Contact() {
                 <Mail className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold">{t.info.email}</h3>
-                <p className="text-text/80">contacto@maikua.com.mx</p>
+                <h3 className="text-lg font-semibold">{contactData.info.email}</h3>
+                <p className="text-text/80">contact@maikua.com</p>
               </div>
             </div>
 
@@ -102,7 +132,7 @@ export function Contact() {
                 <Phone className="h-6 w-6 text-accent" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold">{t.info.phone}</h3>
+                <h3 className="text-lg font-semibold">{contactData.info.phone}</h3>
                 <p className="text-text/80">+52 614 397 77 41</p>
               </div>
             </div>
@@ -112,8 +142,8 @@ export function Contact() {
                 <MapPin className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold">{t.info.location}</h3>
-                <p className="text-text/80">Chihuahua, Chihuahua</p>
+                <h3 className="text-lg font-semibold">{contactData.info.location}</h3>
+                <p className="text-text/80">Chihuahua, Mexico</p>
               </div>
             </div>
 
@@ -122,8 +152,8 @@ export function Contact() {
                 <Clock className="h-6 w-6 text-accent" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold">{t.info.schedule.title}</h3>
-                <p className="text-text/80">{t.info.schedule.hours}</p>
+                <h3 className="text-lg font-semibold">{contactData.info.schedule.title}</h3>
+                <p className="text-text/80">{contactData.info.schedule.hours}</p>
               </div>
             </div>
           </motion.div>
@@ -136,7 +166,7 @@ export function Contact() {
           >
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium mb-2">{t.form.name}</label>
+                <label className="block text-sm font-medium mb-2">{contactData.form.name}</label>
                 <input
                   {...register("name")}
                   className="w-full px-4 py-2 rounded-lg bg-white/50 border border-white/20 focus:ring-2 focus:ring-primary focus:border-transparent backdrop-blur-xl"
@@ -147,7 +177,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2">{t.form.email}</label>
+                <label className="block text-sm font-medium mb-2">{contactData.form.email}</label>
                 <input
                   {...register("email")}
                   type="email"
@@ -159,18 +189,18 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2">{t.form.subject.label}</label>
+                <label className="block text-sm font-medium mb-2">{contactData.form.subject.label}</label>
                 <select
                   {...register("subject")}
                   className="w-full px-4 py-2 rounded-lg bg-white/50 border border-white/20 focus:ring-2 focus:ring-primary focus:border-transparent backdrop-blur-xl"
                 >
-                  <option value="">{t.form.subject.placeholder}</option>
-                  <option value="cotizacion">{t.form.subject.options.quote}</option>
-                  <option value="soporte">{t.form.subject.options.support}</option>
-                  <option value="proyecto">{t.form.subject.options.project}</option>
-                  <option value="colaboracion">{t.form.subject.options.collaboration}</option>
-                  <option value="empleo">{t.form.subject.options.employment}</option>
-                  <option value="otro">{t.form.subject.options.other}</option>
+                  <option value="">{contactData.form.subject.placeholder}</option>
+                  <option value="quote">{contactData.form.subject.options.quote}</option>
+                  <option value="support">{contactData.form.subject.options.support}</option>
+                  <option value="project">{contactData.form.subject.options.project}</option>
+                  <option value="collaboration">{contactData.form.subject.options.collaboration}</option>
+                  <option value="employment">{contactData.form.subject.options.employment}</option>
+                  <option value="other">{contactData.form.subject.options.other}</option>
                 </select>
                 {errors.subject && (
                   <p className="mt-1 text-sm text-primary">{errors.subject.message}</p>
@@ -178,7 +208,7 @@ export function Contact() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2">{t.form.message}</label>
+                <label className="block text-sm font-medium mb-2">{contactData.form.message}</label>
                 <textarea
                   {...register("message")}
                   rows={5}
@@ -194,18 +224,18 @@ export function Contact() {
                 disabled={isSubmitting}
                 className={`w-full btn-brutal ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
-                {isSubmitting ? t.form.sending : t.form.submit}
+                {isSubmitting ? contactData.form.sending : contactData.form.submit}
               </button>
 
               {submitStatus === 'success' && (
                 <div className="mt-4 p-4 bg-green-100 text-green-800 rounded-lg">
-                  {t.form.success}
+                  {contactData.form.success}
                 </div>
               )}
 
               {submitStatus === 'error' && (
                 <div className="mt-4 p-4 bg-red-100 text-red-800 rounded-lg">
-                  {t.form.error}
+                  {contactData.form.error}
                 </div>
               )}
             </form>

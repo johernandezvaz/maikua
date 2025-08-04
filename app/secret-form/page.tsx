@@ -7,29 +7,70 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '@/lib/emailjs';
-import { useLanguage } from "@/lib/i18n/context";
-import { translations } from "@/lib/i18n/translations";
 import { SecretNavigation } from "@/components/secret-navigation";
 
 const formSchema = z.object({
-  fullName: z.string().min(2, "El nombre es demasiado corto"),
-  email: z.string().email("Correo electrónico inválido"),
+  fullName: z.string().min(2, "Name is too short"),
+  email: z.string().email("Invalid email address"),
   phone: z.string().optional(),
-  serviceType: z.string().min(1, "Por favor selecciona un servicio"),
-  projectDescription: z.string().min(10, "La descripción es demasiado corta"),
+  serviceType: z.string().min(1, "Please select a service"),
+  projectDescription: z.string().min(10, "Description is too short"),
   budget: z.string().optional(),
-  preferredLanguage: z.string().min(1, "Por favor selecciona un idioma"),
+  preferredLanguage: z.string().min(1, "Please select a language"),
   foundUs: z.string().optional(),
   otherService: z.string().optional(),
 });
 
 type FormData = z.infer<typeof formSchema>;
 
+const formData = {
+  title: "Contact Form",
+  form: {
+    fullName: "Full name",
+    email: "Email",
+    phone: "Phone number (optional)",
+    serviceType: "Type of service needed",
+    selectService: "Select a service",
+    services: {
+      web: "Web Development",
+      mobile: "Mobile Development",
+      ai: "AI Project",
+      other: "Other"
+    },
+    specifyService: "Specify the service",
+    projectDescription: "Tell us briefly what you need to develop or how we can help you",
+    budget: "Estimated budget (optional)",
+    selectBudget: "Select a budget range",
+    budgetRanges: {
+      less500: "Less than $500",
+      range500to1000: "$500 – $1000",
+      range1000to3000: "$1000 – $3000",
+      more3000: "More than $3000"
+    },
+    preferredLanguage: "What language would you prefer to be contacted in?",
+    selectLanguage: "Select a language",
+    languages: {
+      es: "Spanish",
+      en: "English",
+      fr: "French"
+    },
+    foundUs: "How did you find us? (optional)",
+    selectFoundUs: "Select an option",
+    foundUsOptions: {
+      social: "Social media",
+      recommendation: "Recommendation",
+      google: "Google",
+      other: "Other"
+    },
+    submit: "Submit form",
+    sending: "Sending...",
+    success: "Form submitted! We'll contact you soon.",
+    error: "There was an error submitting the form. Please try again."
+  }
+};
 export default function SecretForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const { language } = useLanguage();
-  const t = translations[language].secretForm;
 
   const { register, handleSubmit, formState: { errors }, watch } = useForm<FormData>({
     resolver: zodResolver(formSchema)
@@ -82,12 +123,12 @@ export default function SecretForm() {
           >
               <div className="glass p-8 rounded-2xl border border-white/20 backdrop-blur-xl">
                   <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                      {t.title}
+                      {formData.title}
                   </h1>
 
                   <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                       <div>
-                          <label className="block text-sm font-medium mb-2">{t.form.fullName}</label>
+                          <label className="block text-sm font-medium mb-2">{formData.form.fullName}</label>
                           <input
                               {...register("fullName")}
                               className="w-full px-4 py-2 rounded-lg bg-white/50 border border-white/20 focus:ring-2 focus:ring-primary focus:border-transparent" />
@@ -97,7 +138,7 @@ export default function SecretForm() {
                       </div>
 
                       <div>
-                          <label className="block text-sm font-medium mb-2">{t.form.email}</label>
+                          <label className="block text-sm font-medium mb-2">{formData.form.email}</label>
                           <input
                               {...register("email")}
                               type="email"
@@ -108,7 +149,7 @@ export default function SecretForm() {
                       </div>
 
                       <div>
-                          <label className="block text-sm font-medium mb-2">{t.form.phone}</label>
+                          <label className="block text-sm font-medium mb-2">{formData.form.phone}</label>
                           <input
                               {...register("phone")}
                               type="tel"
@@ -116,16 +157,16 @@ export default function SecretForm() {
                       </div>
 
                       <div>
-                          <label className="block text-sm font-medium mb-2">{t.form.serviceType}</label>
+                          <label className="block text-sm font-medium mb-2">{formData.form.serviceType}</label>
                           <select
                               {...register("serviceType")}
                               className="w-full px-4 py-2 rounded-lg bg-white/50 border border-white/20 focus:ring-2 focus:ring-primary focus:border-transparent"
                           >
-                              <option value="">{t.form.selectService}</option>
-                              <option value="web">{t.form.services.web}</option>
-                              <option value="mobile">{t.form.services.mobile}</option>
-                              <option value="ai">{t.form.services.ai}</option>
-                              <option value="other">{t.form.services.other}</option>
+                              <option value="">{formData.form.selectService}</option>
+                              <option value="web">{formData.form.services.web}</option>
+                              <option value="mobile">{formData.form.services.mobile}</option>
+                              <option value="ai">{formData.form.services.ai}</option>
+                              <option value="other">{formData.form.services.other}</option>
                           </select>
                           {errors.serviceType && (
                               <p className="mt-1 text-sm text-primary">{errors.serviceType.message}</p>
@@ -133,13 +174,13 @@ export default function SecretForm() {
                           {serviceType === 'other' && (
                               <input
                                   {...register("otherService")}
-                                  placeholder={t.form.specifyService}
+                                  placeholder={formData.form.specifyService}
                                   className="mt-2 w-full px-4 py-2 rounded-lg bg-white/50 border border-white/20 focus:ring-2 focus:ring-primary focus:border-transparent" />
                           )}
                       </div>
 
                       <div>
-                          <label className="block text-sm font-medium mb-2">{t.form.projectDescription}</label>
+                          <label className="block text-sm font-medium mb-2">{formData.form.projectDescription}</label>
                           <textarea
                               {...register("projectDescription")}
                               rows={5}
@@ -150,29 +191,29 @@ export default function SecretForm() {
                       </div>
 
                       <div>
-                          <label className="block text-sm font-medium mb-2">{t.form.budget}</label>
+                          <label className="block text-sm font-medium mb-2">{formData.form.budget}</label>
                           <select
                               {...register("budget")}
                               className="w-full px-4 py-2 rounded-lg bg-white/50 border border-white/20 focus:ring-2 focus:ring-primary focus:border-transparent"
                           >
-                              <option value="">{t.form.selectBudget}</option>
-                              <option value="less500">{t.form.budgetRanges.less500}</option>
-                              <option value="500to1000">{t.form.budgetRanges.range500to1000}</option>
-                              <option value="1000to3000">{t.form.budgetRanges.range1000to3000}</option>
-                              <option value="more3000">{t.form.budgetRanges.more3000}</option>
+                              <option value="">{formData.form.selectBudget}</option>
+                              <option value="less500">{formData.form.budgetRanges.less500}</option>
+                              <option value="500to1000">{formData.form.budgetRanges.range500to1000}</option>
+                              <option value="1000to3000">{formData.form.budgetRanges.range1000to3000}</option>
+                              <option value="more3000">{formData.form.budgetRanges.more3000}</option>
                           </select>
                       </div>
 
                       <div>
-                          <label className="block text-sm font-medium mb-2">{t.form.preferredLanguage}</label>
+                          <label className="block text-sm font-medium mb-2">{formData.form.preferredLanguage}</label>
                           <select
                               {...register("preferredLanguage")}
                               className="w-full px-4 py-2 rounded-lg bg-white/50 border border-white/20 focus:ring-2 focus:ring-primary focus:border-transparent"
                           >
-                              <option value="">{t.form.selectLanguage}</option>
-                              <option value="es">{t.form.languages.es}</option>
-                              <option value="en">{t.form.languages.en}</option>
-                              <option value="fr">{t.form.languages.fr}</option>
+                              <option value="">{formData.form.selectLanguage}</option>
+                              <option value="es">{formData.form.languages.es}</option>
+                              <option value="en">{formData.form.languages.en}</option>
+                              <option value="fr">{formData.form.languages.fr}</option>
                           </select>
                           {errors.preferredLanguage && (
                               <p className="mt-1 text-sm text-primary">{errors.preferredLanguage.message}</p>
@@ -180,16 +221,16 @@ export default function SecretForm() {
                       </div>
 
                       <div>
-                          <label className="block text-sm font-medium mb-2">{t.form.foundUs}</label>
+                          <label className="block text-sm font-medium mb-2">{formData.form.foundUs}</label>
                           <select
                               {...register("foundUs")}
                               className="w-full px-4 py-2 rounded-lg bg-white/50 border border-white/20 focus:ring-2 focus:ring-primary focus:border-transparent"
                           >
-                              <option value="">{t.form.selectFoundUs}</option>
-                              <option value="social">{t.form.foundUsOptions.social}</option>
-                              <option value="recommendation">{t.form.foundUsOptions.recommendation}</option>
-                              <option value="google">{t.form.foundUsOptions.google}</option>
-                              <option value="other">{t.form.foundUsOptions.other}</option>
+                              <option value="">{formData.form.selectFoundUs}</option>
+                              <option value="social">{formData.form.foundUsOptions.social}</option>
+                              <option value="recommendation">{formData.form.foundUsOptions.recommendation}</option>
+                              <option value="google">{formData.form.foundUsOptions.google}</option>
+                              <option value="other">{formData.form.foundUsOptions.other}</option>
                           </select>
                       </div>
 
@@ -198,18 +239,18 @@ export default function SecretForm() {
                           disabled={isSubmitting}
                           className={`w-full btn-brutal ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                       >
-                          {isSubmitting ? t.form.sending : t.form.submit}
+                          {isSubmitting ? formData.form.sending : formData.form.submit}
                       </button>
 
                       {submitStatus === 'success' && (
                           <div className="mt-4 p-4 bg-green-100 text-green-800 rounded-lg">
-                              {t.form.success}
+                              {formData.form.success}
                           </div>
                       )}
 
                       {submitStatus === 'error' && (
                           <div className="mt-4 p-4 bg-red-100 text-red-800 rounded-lg">
-                              {t.form.error}
+                              {formData.form.error}
                           </div>
                       )}
                   </form>

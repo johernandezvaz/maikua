@@ -21,35 +21,35 @@ export default function CookiesPolicy() {
       >
         <div className="glass p-8 rounded-2xl border border-white/20 backdrop-blur-xl">
           <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Política de Cookies
+            Cookie Policy
           </h1>
           
           <div className="space-y-6 text-text">
             <p className="text-lg">
-              Nuestro sitio web utiliza cookies para mejorar la experiencia del usuario, analizar el 
-              tráfico y personalizar el contenido.
+              Our website uses cookies to improve user experience, analyze traffic, 
+              and personalize content.
             </p>
             
             <p className="text-lg">
-              Puedes aceptar o rechazar el uso de cookies a través de la configuración de tu navegador. 
-              Al aceptar, permites que recopilemos datos no personales, como el comportamiento en el sitio, 
-              para ofrecerte una experiencia más relevante.
+              You can accept or reject the use of cookies through your browser settings. 
+              By accepting, you allow us to collect non-personal data, such as site behavior, 
+              to offer you a more relevant experience.
             </p>
 
             <div className="mt-8 p-6 bg-accent/5 rounded-lg border border-accent/10">
-              <h2 className="text-xl font-semibold mb-4 text-accent">Tipos de Cookies que utilizamos:</h2>
+              <h2 className="text-xl font-semibold mb-4 text-accent">Types of Cookies we use:</h2>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2 mr-2 bg-accent rounded-full"></span>
-                  <span>Cookies esenciales para el funcionamiento del sitio</span>
+                  <span>Essential cookies for site functionality</span>
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2 mr-2 bg-accent rounded-full"></span>
-                  <span>Cookies analíticas para mejorar nuestros servicios</span>
+                  <span>Analytics cookies to improve our services</span>
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 mt-2 mr-2 bg-accent rounded-full"></span>
-                  <span>Cookies de preferencias para recordar tus ajustes</span>
+                  <span>Preference cookies to remember your settings</span>
                 </li>
               </ul>
             </div>
@@ -60,7 +60,7 @@ export default function CookiesPolicy() {
             className="inline-flex items-center mt-8 px-6 py-3 text-white bg-primary rounded-lg hover:bg-accent transition-colors duration-300"
           >
             <ArrowLeft className="mr-2 h-5 w-5" />
-            Volver al inicio
+            Back to home
           </Link>
         </div>
       </motion.div>

@@ -21,28 +21,28 @@ export default function PrivacyPolicy() {
       >
         <div className="glass p-8 rounded-2xl border border-white/20 backdrop-blur-xl">
           <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Política de Privacidad
+            Privacy Policy
           </h1>
           
           <div className="space-y-6 text-text">
             <p className="text-lg">
-              En Maikua, nos comprometemos a proteger la información personal de nuestros usuarios. 
-              Recopilamos y utilizamos datos únicamente para mejorar nuestros servicios, desarrollar 
-              soluciones personalizadas y mantener una comunicación efectiva.
+              At Maikua, we are committed to protecting the personal information of our users. 
+              We collect and use data solely to improve our services, develop personalized solutions, 
+              and maintain effective communication.
             </p>
             
             <p className="text-lg">
-              Nunca compartimos ni vendemos información personal a terceros sin consentimiento previo. 
-              Implementamos medidas de seguridad avanzadas para proteger los datos de accesos no autorizados.
+              We never share or sell personal information to third parties without prior consent. 
+              We implement advanced security measures to protect data from unauthorized access.
             </p>
             
             <p className="text-lg">
-              Si tienes dudas sobre cómo gestionamos tu información, puedes contactarnos en{" "}
+              If you have questions about how we manage your information, you can contact us at{" "}
               <a 
-                href="mailto:contacto@maikua.com.mx"
+                href="mailto:contact@maikua.com"
                 className="text-accent hover:text-accent-hover underline"
               >
-                contacto@maikua.com.mx
+                contact@maikua.com
               </a>
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function PrivacyPolicy() {
             className="inline-flex items-center mt-8 px-6 py-3 text-white bg-primary rounded-lg hover:bg-accent transition-colors duration-300"
           >
             <ArrowLeft className="mr-2 h-5 w-5" />
-            Volver al inicio
+            Back to home
           </Link>
         </div>
       </motion.div>

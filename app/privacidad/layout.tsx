@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Política de Privacidad | Maikua',
-  description: 'Política de privacidad de Maikua. Conoce cómo protegemos y utilizamos tu información personal.',
+  title: 'Privacy Policy | Maikua',
+  description: 'Maikua privacy policy. Learn how we protect and use your personal information.',
   robots: 'noindex, follow',
 };
 
